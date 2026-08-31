@@ -56,7 +56,6 @@ export default function Home() {
 
         <aside className="identity-panel" aria-label="Yuvraj Riyar profile">
           <div className="portrait-frame"><img src="/yuvraj-graduation.jpeg" alt="Yuvraj Riyar at UC Davis graduation" /><div className="portrait-index">YUVRAJ S. RIYAR</div></div>
-          <div className="identity-note"><p>Currently learning</p><strong>SQL pipelines · Prophecy · Power BI</strong></div>
         </aside>
       </section>
 
