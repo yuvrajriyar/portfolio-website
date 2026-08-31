@@ -37,9 +37,9 @@ export default function ProTechCarousel() {
         {active === 2 && <figure className="protech-slide protech-photo-slide"><img className="protech-presentation-photo" src="/protech-presentation.jpeg" alt="Yuvraj Riyar presenting ProTech at the Aggie Sports Analytics case competition" /><figcaption><span>ASA CASE COMPETITION</span><strong>Presenting ProTech</strong></figcaption></figure>}
       </div>
       <div className="carousel-controls">
-        <button type="button" onClick={() => move(-1)} aria-label="Previous ProTech image">←</button>
-        <div>{slides.map((slide, index) => <button type="button" key={slide} className={index === active ? "active" : ""} onClick={() => setActive(index)} aria-label={`Show ${slide}`} />)}</div>
-        <button type="button" onClick={() => move(1)} aria-label="Next ProTech image">→</button>
+        <button className="carousel-arrow carousel-prev" type="button" onClick={() => move(-1)} aria-label="Previous ProTech image">‹</button>
+        <div className="carousel-dots">{slides.map((slide, index) => <button type="button" key={slide} className={index === active ? "active" : ""} onClick={() => setActive(index)} aria-label={`Show ${slide}`} />)}</div>
+        <button className="carousel-arrow carousel-next" type="button" onClick={() => move(1)} aria-label="Next ProTech image">›</button>
       </div>
     </div>
   );
