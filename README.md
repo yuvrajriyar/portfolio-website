@@ -1,53 +1,38 @@
-# Yuvraj Riyar | Portfolio Website
+# Yuvraj Riyar | Portfolio
 
-Source repository for my personal analytics portfolio, designed to present my experience, projects, technical skills, and professional background in one polished location.
+Personal portfolio for Yuvraj Riyar, a UC Davis Applied Statistics graduate focused on data, business, financial, and operational analytics.
 
-## Planned Stack
+**Live site:** [yuvraj-portfolio.yuvi200430.chatgpt.site](https://yuvraj-portfolio.yuvi200430.chatgpt.site)
+
+## Highlights
+
+- Executive profile and personal story
+- Visual skills overview
+- ProTech athlete-performance project for UC Davis Football
+- NBA injury-risk analysis
+- Transportation dispatch analytics
+- Financial data pipeline project in development
+- Professional contact form and references page
+
+## Built With
 
 - Next.js
 - TypeScript
+- React
 - Tailwind CSS
-- Vercel
 
-## Website Sections
+## Run Locally
 
-- Introduction and professional positioning
-- About
-- Experience
-- Featured projects
-- Technical skills
-- Résumé
-- Contact
+```bash
+npm install
+npm run dev
+```
 
-## Initial Featured Work
-
-- ProTech Athlete Performance Platform
-- R.E.I. Dispatch Command Centre
-- NBA Injury Risk Analysis
-- Future end-to-end financial data pipeline and Power BI project
-
-## Launch Plan
-
-### Version 1
-
-- Responsive single-page portfolio
-- Professional biography
-- Featured project cards
-- Skills and experience
-- Résumé access
-- LinkedIn, GitHub, and email contact links
-- Vercel deployment
-
-### Future Development
-
-- Detailed project case-study pages
-- Practice and challenge progress
-- Live demonstrations where appropriate
-- Additional projects as they are completed
+Then open [http://localhost:3000](http://localhost:3000).
 
 ## Status
 
-Planning complete. Website development and deployment are the next priority.
+The portfolio is live. The résumé and named professional references will be added once their updated versions are ready.
 
 ## Author
 
