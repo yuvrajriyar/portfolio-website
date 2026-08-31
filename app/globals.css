@@ -186,7 +186,7 @@ footer h2 { max-width:780px; font-size:clamp(40px,5vw,68px); }
 .protech-photo-slide figcaption strong { font-family:Georgia,serif; font-size:20px; font-weight:400; }
 .carousel-controls { position:absolute; z-index:5; inset:0; pointer-events:none; }
 .carousel-controls button { border:0; color:var(--cream); cursor:pointer; pointer-events:auto; }
-.carousel-arrow { position:absolute; top:58%; display:grid; width:48px; height:72px; place-items:center; border:1px solid rgba(243,238,228,.55)!important; background:rgba(200,173,124,.92); box-shadow:0 8px 24px rgba(0,0,0,.48); color:#080808!important; font-family:Georgia,serif; font-size:34px; opacity:.88; transform:translateY(-50%); transition:opacity 180ms ease,background 180ms ease,transform 180ms ease; }
+.carousel-arrow { position:absolute; top:61%; display:grid; width:48px; height:72px; place-items:center; border:1px solid rgba(243,238,228,.55)!important; background:rgba(200,173,124,.94); box-shadow:0 8px 24px rgba(0,0,0,.48); color:#080808!important; font-family:Georgia,serif; font-size:34px; opacity:.92; transform:translateY(-50%); transition:opacity 180ms ease,background 180ms ease,transform 180ms ease; }
 .protech-carousel:hover .carousel-arrow,.carousel-arrow:focus-visible { opacity:1; }
 .carousel-arrow:hover { background:#f0dfbc; transform:translateY(-50%) scale(1.04); }
 .carousel-prev { left:14px; }
