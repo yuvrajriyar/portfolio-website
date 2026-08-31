@@ -12,6 +12,14 @@ const skills = [
   { mark: "Ay", name: "Alteryx", detail: "Data workflows" },
   { mark: "Rx", name: "React", detail: "Analytical products" },
   { mark: "DB", name: "PostgreSQL", detail: "Relational data" },
+  { mark: "Tb", name: "Tableau", detail: "Data visualisation" },
+  { mark: "Sb", name: "Supabase", detail: "Data & storage" },
+  { mark: "Git", name: "Git & GitHub", detail: "Version control" },
+  { mark: "Fg", name: "Figma", detail: "Interface design" },
+  { mark: "Cv", name: "Canva", detail: "Visual communication" },
+  { mark: "Mg", name: "MongoDB", detail: "NoSQL data" },
+  { mark: "M", name: "MATLAB", detail: "Numerical computing" },
+  { mark: "PP", name: "PowerPoint", detail: "Presentation design" },
 ];
 
 function ArrowUpRight() {
@@ -82,7 +90,7 @@ export default function Home() {
 
       <section id="skills" className="skills-section">
         <div className="section-shell section-block">
-          <div className="skills-heading"><div><p className="section-index">02 / Skills</p><h2>A toolkit I&apos;m actively putting to work.</h2></div><p>I would rather show a focused set of useful skills than an endless wall of logos. These are the tools behind my current work and learning.</p></div>
+          <div className="skills-heading"><div><p className="section-index">02 / Skills</p><h2>Technical range, applied with purpose.</h2></div><p>Tools I&apos;ve used across analytics, engineering, visualisation, product work, and professional communication.</p></div>
           <div className="skills-grid">
             {skills.map((skill) => <article className="skill-card" key={skill.name}><div className="skill-mark">{skill.mark}</div><div><h3>{skill.name}</h3><p>{skill.detail}</p></div></article>)}
           </div>
