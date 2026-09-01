@@ -117,7 +117,17 @@ export default function Home() {
           <div className="about-story">
             <p>I have always been the person who researches the options, asks one more question, and turns over every rock before making a decision, whether the stakes are small or substantial. I first recognised that instinct as a real passion in high school, when I discovered that data could turn curiosity into a practical way of understanding people, systems, and outcomes.</p>
             <p>That instinct led me to UC Davis, where I studied Applied Statistics and Managerial Economics, and then into work spanning athlete performance, transportation operations, and financial analysis. I enjoy getting close to how a system actually works, finding what others may have overlooked, and translating the evidence into a clearer next move. I bring discipline, ownership, and a willingness to learn quickly, especially when the work carries real responsibility.</p>
-            <p>Outside work and school, sport is a constant. I am a devoted Raiders and Warriors fan, and I enjoy weightlifting, basketball, golf, and soccer. I also love to cook and run a small Neapolitan pizza pop-up for fun. Travelling through more than ten countries has made me more independent, adaptable, and comfortable in unfamiliar environments. Across all of it, the thread is the same: I enjoy learning the details, improving the process, and taking things seriously without losing the human side.</p>
+            <p>Outside work and school, sport is a constant. I am a devoted Raiders and Warriors fan, and I enjoy weightlifting, basketball, golf, and playing soccer with Aggie Sports Analytics. I love travelling, exploring different cultures, and seeing how people approach life beyond what is familiar to me. At home, I am usually experimenting with Neapolitan pizza or dialling in a new coffee at my espresso bar. Across all of it, the thread is the same: curiosity, attention to detail, and genuine enjoyment of the process.</p>
+          </div>
+          <div className="about-gallery" aria-label="Life outside work and school">
+            <figure className="about-gallery-card about-gallery-wide">
+              <img src="/asa-soccer-team.jpeg" alt="Yuvraj with the Aggie Sports Analytics soccer team after a match" />
+              <figcaption><span>Team</span><strong>ASA soccer, outside the analytics room</strong></figcaption>
+            </figure>
+            <figure className="about-gallery-card">
+              <img src="/neapolitan-pizza.jpeg" alt="A Neapolitan pizza made by Yuvraj at home" />
+              <figcaption><span>Craft</span><strong>Neapolitan pizza, made at home</strong></figcaption>
+            </figure>
           </div>
         </div>
       </section>
