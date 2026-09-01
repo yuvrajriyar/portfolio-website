@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="YR monogram">
+  <rect width="64" height="64" rx="10" fill="#080807"/>
+  <rect x="4" y="4" width="56" height="56" rx="7" fill="none" stroke="#c7a66a" stroke-width="2"/>
+  <rect x="8" y="8" width="48" height="48" rx="5" fill="none" stroke="#675a43" stroke-width="1"/>
+  <text x="31" y="43" text-anchor="middle" fill="#f2ede3" font-family="Baskerville, 'Times New Roman', Georgia, serif" font-size="34" font-weight="600" letter-spacing="-5">Y</text>
+  <text x="40" y="43" text-anchor="middle" fill="#c7a66a" font-family="Baskerville, 'Times New Roman', Georgia, serif" font-size="33" font-weight="600">R</text>
+</svg>
