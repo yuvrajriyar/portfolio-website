@@ -49,13 +49,14 @@ export default function Home() {
           <p className="hero-summary">Curious, disciplined, and self-starting, I bring practical experience across sports technology, transportation operations, and financial analysis. I learn quickly, take ownership, and care about turning complex information into decisions that help people act with confidence.</p>
           <div className="hero-actions">
             <Link className="primary-button" href="/projects">See my projects</Link>
-            <span className="secondary-button muted-button" aria-disabled="true">Résumé coming soon</span>
+            <a className="secondary-button" href="/Yuvraj-Riyar-Resume.pdf" target="_blank" rel="noreferrer">View résumé <span>↗</span></a>
             <a className="linkedin-button" href="https://www.linkedin.com/in/yuvrajriyar" target="_blank" rel="noreferrer"><span>in</span> LinkedIn</a>
+            <a className="github-button" href="https://github.com/yuvrajriyar" target="_blank" rel="noreferrer"><span>GH</span> GitHub</a>
           </div>
         </div>
 
         <aside className="identity-panel" aria-label="Yuvraj Riyar profile">
-          <div className="portrait-frame"><img src="/yuvraj-graduation.jpeg" alt="Yuvraj Riyar at UC Davis graduation" /><div className="portrait-index">YUVRAJ S. RIYAR</div></div>
+          <div className="portrait-frame"><img src="/yuvraj-graduation-portrait.jpeg" alt="Yuvraj Riyar at his UC Davis graduation" /><div className="portrait-index">YUVRAJ S. RIYAR</div></div>
         </aside>
       </section>
 
