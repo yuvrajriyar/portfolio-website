@@ -1,39 +1,44 @@
-# Yuvraj Riyar | Portfolio
+# Yuvraj Riyar — Portfolio
 
-Personal portfolio for Yuvraj Riyar, a UC Davis Applied Statistics graduate focused on data, business, financial, and operational analytics.
+A personal portfolio presenting my work in data, business, financial, operational, and sports analytics.
 
-**Live site:** [yuvraj-portfolio.yuvi200430.chatgpt.site](https://yuvraj-portfolio.yuvi200430.chatgpt.site)
+**Live website:** [yuvrajriyar.vercel.app](https://yuvrajriyar.vercel.app)
 
-## Highlights
+## About the portfolio
 
-- Executive profile and personal story
-- Visual skills overview
-- ProTech athlete-performance project for UC Davis Football
-- NBA injury-risk analysis
-- Transportation dispatch analytics
-- Financial data pipeline project in development
-- Professional contact form and references page
+The site combines a concise professional introduction with a more personal account of how I approach analysis, solve problems, and build useful tools. It includes:
 
-## Built With
+- A visual project portfolio with every project displayed
+- A ProTech gallery featuring the platform, team, and case-competition presentation
+- NBA injury-risk and transportation analytics case studies
+- A financial data pipeline project in development
+- A clear visual overview of technical and design tools
+- Résumé, GitHub, LinkedIn, contact, and references sections
+- Personal interests including sports, travel, Neapolitan pizza, and espresso
 
-- Next.js
+## Technology
+
+- Next.js 16
+- React 19
 - TypeScript
-- React
-- Tailwind CSS
+- CSS
+- Vercel
 
-## Run Locally
+## Run locally
 
 ```bash
 npm install
-npm run dev
+npx next dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
 
-## Status
+## Deployment
 
-The portfolio is live. The résumé and named professional references will be added once their updated versions are ready.
+The production site is hosted on Vercel at [yuvrajriyar.vercel.app](https://yuvrajriyar.vercel.app).
 
 ## Author
 
-[Yuvraj Riyar](https://github.com/yuvrajriyar)
+**Yuvraj Riyar**
+
+[GitHub](https://github.com/yuvrajriyar) · [LinkedIn](https://www.linkedin.com/in/yuvrajriyar) · [Email](mailto:ysriyar30@gmail.com)
