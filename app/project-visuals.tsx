@@ -49,3 +49,18 @@ export function PipelineVisual() {
     </div>
   );
 }
+
+export function EstateFlowVisual() {
+  return (
+    <div className="project-visual pipeline-visual" aria-label="Stylised EstateFlow housing analytics pipeline preview">
+      <div className="visual-topline"><span>HOUSING INTELLIGENCE</span><span>ZIP × MONTH</span></div>
+      <div className="pipeline-flow">
+        <div><span>01</span><strong>Zillow</strong><small>ZHVI + ZORI</small></div><i />
+        <div><span>02</span><strong>Python</strong><small>Profile + reshape</small></div><i />
+        <div><span>03</span><strong>Postgres</strong><small>Stage + model</small></div><i />
+        <div><span>04</span><strong>Metrics</strong><small>Rent to value</small></div>
+      </div>
+      <div className="metric-ribbon pipeline-metrics"><span>HOME VALUE</span><span>RENT</span><span>RENT / VALUE</span></div>
+    </div>
+  );
+}

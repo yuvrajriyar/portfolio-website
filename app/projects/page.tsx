@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DispatchVisual, NBAVisual, PipelineVisual, ProTechVisual } from "../project-visuals";
+import { DispatchVisual, EstateFlowVisual, NBAVisual, ProTechVisual } from "../project-visuals";
 
 const projects = [
   {
@@ -26,11 +26,12 @@ const projects = [
     visual: <DispatchVisual />,
   },
   {
-    eyebrow: "Next flagship build",
-    title: "Financial Data Pipeline",
-    description: "An end-to-end solo project in development around financial reconciliation, data-quality testing, SQL transformation, and Power BI reporting.",
-    stack: ["SQL", "Python", "Power BI", "Data quality"],
-    visual: <PipelineVisual />,
+    eyebrow: "Housing analytics · End-to-end pipeline",
+    title: "EstateFlow",
+    description: "A solo data-engineering and analytics project that profiles and reshapes Zillow home-value and rent data, models it in PostgreSQL at the ZIP-month grain, and produces validated market-comparison metrics. The Power BI reporting layer is next.",
+    stack: ["Python", "PostgreSQL", "SQL", "Docker", "Data quality"],
+    href: "https://github.com/yuvrajriyar/EstateFlow",
+    visual: <EstateFlowVisual />,
   },
 ];
 
@@ -56,7 +57,7 @@ export default function ProjectsPage() {
               <h2>{project.title}</h2>
               <p>{project.description}</p>
               <div className="tag-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-              {project.href ? <a className="card-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a> : <span className="card-status">{project.title.includes("Pipeline") ? "In development" : "Private operational system"}</span>}
+              {project.href ? <a className="card-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a> : <span className="card-status">Private operational system</span>}
             </div>
           </article>
         ))}
