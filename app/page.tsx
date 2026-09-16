@@ -71,15 +71,15 @@ export default function Home() {
         <div className="featured-project-grid">
           <article className="featured-project-card">
             <ProTechVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">UC Davis Football</p><h3>ProTech</h3><p>An athlete-performance platform created with Aggie Sports Analytics for football staff.</p><a href="https://github.com/AggieSportsAnalytics/ProTech" target="_blank" rel="noreferrer">View repository <ArrowUpRight /></a></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">UC Davis Football</p><h3>ProTech</h3><p>An athlete-performance platform created with Aggie Sports Analytics for football staff.</p><Link href="/projects/protech">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
             <NBAVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">Statistical modelling</p><h3>NBA Injury Risk Analysis</h3><p>A reproducible R analysis exploring injury risk through player characteristics, workload, and injury history.</p><a href="https://github.com/yuvrajriyar/STA-141A-NBA-INJURIES" target="_blank" rel="noreferrer">View repository <ArrowUpRight /></a></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">Statistical modelling</p><h3>NBA Injury Risk Analysis</h3><p>A reproducible R analysis exploring injury risk through player characteristics, workload, and injury history.</p><Link href="/projects/nba-injury-risk">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
             <DispatchVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">Soaring Roadlines Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><span>Private operational system</span></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">Soaring Roadlines Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><Link href="/projects/dispatch-command-centre">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card estateflow-card">
             <EstateFlowVisual />

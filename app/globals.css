@@ -441,3 +441,91 @@ footer h2 { max-width:780px; font-size:clamp(40px,5vw,68px); }
   .coverage-chart { padding:20px; }.coverage-row { grid-template-columns:1fr; gap:10px; }.coverage-row em { text-align:left; }
   .estate-formula-card { padding:28px; }.estate-footer-cta { align-items:flex-start; flex-direction:column; padding-top:80px; padding-bottom:80px; }
 }
+
+/* Shared project case studies */
+.project-case-study { --case-accent:var(--copper); }
+.protech-case-study { --case-accent:#69c8c0; }
+.nba-case-study { --case-accent:#c66d62; }
+.dispatch-case-study { --case-accent:#5d9ccc; }
+.project-case-study .estate-status span { background:var(--case-accent); box-shadow:0 0 0 5px color-mix(in srgb,var(--case-accent) 16%,transparent); }
+.project-case-study .estate-principle { border-top-color:var(--case-accent); }
+.project-case-hero .estate-breadcrumb strong,.project-case-study .estate-principle span { color:var(--case-accent); }
+.project-case-hero h1 { max-width:950px; font-size:clamp(64px,8.4vw,122px); }
+.project-case-hero-visual { margin-top:82px; }
+.project-case-hero-visual>.project-visual { height:460px; border:1px solid rgba(216,195,152,.22); }
+.project-case-hero-visual .protech-carousel { min-height:460px; }
+.project-case-hero-visual .carousel-stage { height:100%; }
+.project-case-hero-visual .protech-dashboard-slide svg { height:310px; max-width:620px; }
+.project-case-hero-visual .protech-photo-slide img { object-position:center 42%; }
+.project-case-hero-visual .dispatch-visual,.project-case-hero-visual .nba-visual { padding:38px 44px; }
+.project-case-hero-visual .route-board,.project-case-hero-visual .nba-chart { max-width:780px; margin-right:auto; margin-left:auto; }
+.project-contribution-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.project-contribution-grid article { min-height:255px; padding:30px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.project-contribution-grid span { color:var(--case-accent); font-family:monospace; font-size:11px; }
+.project-contribution-grid h3 { margin:62px 0 14px; font-family:Georgia,serif; font-size:26px; font-weight:400; }
+.project-contribution-grid p { margin:0; color:var(--muted); font-size:14px; line-height:1.75; }
+.project-flow-section { padding:120px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#0f1112; }
+.project-flow-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.project-flow-grid article { min-height:250px; padding:28px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.project-flow-grid span { color:var(--case-accent); font-family:monospace; font-size:10px; }
+.project-flow-grid h3 { margin:64px 0 13px; font-family:Georgia,serif; font-size:24px; font-weight:400; }
+.project-flow-grid p { margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+.project-feature-list { border-top:1px solid var(--line); }
+.project-feature-list article { display:grid; grid-template-columns:.7fr 1.3fr; align-items:baseline; gap:45px; padding:26px 0; border-bottom:1px solid var(--line); }
+.project-feature-list strong { font-family:Georgia,serif; font-size:23px; font-weight:400; }
+.project-feature-list p { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+.model-comparison-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.model-comparison-grid article { min-height:290px; padding:30px; border:1px solid var(--line); background:linear-gradient(145deg,rgba(198,109,98,.1),rgba(8,8,8,.8)); }
+.model-comparison-grid span { color:var(--case-accent); font-family:monospace; font-size:10px; letter-spacing:.08em; }
+.model-comparison-grid h3 { margin:82px 0 15px; font-family:Georgia,serif; font-size:28px; font-weight:400; }
+.model-comparison-grid p { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+.nba-results-layout { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.nba-score-card,.nba-result-note { min-height:300px; padding:32px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.nba-score-card>span { color:var(--muted); font-family:monospace; font-size:10px; letter-spacing:.08em; }
+.nba-score-card>strong { display:block; margin:48px 0 15px; color:var(--case-accent); font-family:Georgia,serif; font-size:78px; font-weight:400; line-height:.9; }
+.nba-score-card>strong small { font-size:32px; }
+.nba-score-card p,.nba-result-note p { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+.nba-result-note { grid-column:1 / -1; min-height:auto; background:#10100f; }
+.nba-result-note h3 { margin:0 0 13px; font-family:Georgia,serif; font-size:27px; font-weight:400; }
+.dispatch-workflow { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.dispatch-workflow article { min-height:270px; padding:28px; border-top:2px solid var(--case-accent); background:#0b0e10; }
+.dispatch-workflow span { color:var(--case-accent); font-family:monospace; font-size:10px; letter-spacing:.09em; }
+.dispatch-workflow h3 { margin:72px 0 14px; font-family:Georgia,serif; font-size:24px; font-weight:400; }
+.dispatch-workflow p,.project-section-copy { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+.dispatch-decision-layout { display:grid; grid-template-columns:.72fr 1.28fr; gap:85px; }
+.dispatch-decision-layout h2 { margin:15px 0 20px; font-family:Georgia,serif; font-size:clamp(38px,4vw,58px); font-weight:400; letter-spacing:-.04em; line-height:1.08; }
+.dispatch-priority-board { border-top:1px solid var(--line); }
+.dispatch-priority-board article { display:grid; grid-template-columns:auto 1fr; gap:24px; padding:24px 0; border-bottom:1px solid var(--line); }
+.dispatch-priority-board i { width:9px; height:9px; margin-top:5px; border-radius:50%; }
+.dispatch-priority-board span { font-family:monospace; font-size:9px; letter-spacing:.1em; }
+.dispatch-priority-board h3 { margin:7px 0 8px; font-family:Georgia,serif; font-size:22px; font-weight:400; }
+.dispatch-priority-board p { margin:0; color:var(--muted); font-size:13px; line-height:1.65; }
+.priority-green i { background:#69a878; }.priority-green span { color:#79b487; }
+.priority-amber i { background:#c9a45f; }.priority-amber span { color:#d8b770; }
+.priority-red i { background:#b75c55; }.priority-red span { color:#c96d64; }
+.dispatch-impact-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.dispatch-impact-grid article { min-height:285px; padding:30px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.dispatch-impact-grid strong { display:block; color:var(--case-accent); font-family:Georgia,serif; font-size:68px; font-weight:400; }
+.dispatch-impact-grid h3 { margin:48px 0 12px; font-family:Georgia,serif; font-size:24px; font-weight:400; }
+.dispatch-impact-grid p { margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+
+@media (max-width:900px) {
+  .project-contribution-grid,.project-flow-grid,.dispatch-workflow { grid-template-columns:1fr 1fr; }
+  .model-comparison-grid { grid-template-columns:1fr; }
+  .model-comparison-grid article { min-height:240px; }
+  .dispatch-decision-layout { grid-template-columns:1fr; gap:50px; }
+  .dispatch-impact-grid { grid-template-columns:1fr; }
+  .dispatch-impact-grid article { min-height:auto; }
+}
+@media (max-width:560px) {
+  .project-case-hero h1 { font-size:58px; line-height:.92; }
+  .project-case-hero-visual { margin-top:55px; }
+  .project-case-hero-visual>.project-visual,.project-case-hero-visual .protech-carousel { height:360px; min-height:360px; }
+  .project-case-hero-visual .dispatch-visual,.project-case-hero-visual .nba-visual { padding:24px 20px; }
+  .project-contribution-grid,.project-flow-grid,.dispatch-workflow,.nba-results-layout { grid-template-columns:1fr; }
+  .project-contribution-grid article,.project-flow-grid article { min-height:225px; }
+  .project-feature-list article { grid-template-columns:1fr; gap:10px; }
+  .nba-result-note { grid-column:auto; }
+  .nba-score-card>strong { font-size:62px; }
+  .project-flow-section { padding:80px 0; }
+}

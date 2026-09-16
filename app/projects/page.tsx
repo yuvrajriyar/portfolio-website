@@ -8,6 +8,7 @@ const projects = [
     description: "A full-stack athlete performance platform built with Aggie Sports Analytics for UC Davis Football staff. My work covered project coordination, data visualisation, Supabase workflows, validation, and front-end features.",
     stack: ["React", "Supabase", "Recharts", "Data validation"],
     href: "https://github.com/AggieSportsAnalytics/ProTech",
+    detailsHref: "/projects/protech",
     visual: <ProTechVisual />,
   },
   {
@@ -16,6 +17,7 @@ const projects = [
     description: "A team academic analysis examining NBA injury risk through player characteristics, workload, and injury-history data, with reproducible modelling and documentation in R.",
     stack: ["R", "Statistics", "Data cleaning", "Visualisation"],
     href: "https://github.com/yuvrajriyar/STA-141A-NBA-INJURIES",
+    detailsHref: "/projects/nba-injury-risk",
     visual: <NBAVisual />,
   },
   {
@@ -23,6 +25,7 @@ const projects = [
     title: "Dispatch Command Centre",
     description: "A practical dispatch tool for tracking active loads across a 20-truck fleet, estimating empty dates, prioritising backloads, and making twice-daily planning easier.",
     stack: ["Python", "Streamlit", "SQLite", "Pandas"],
+    detailsHref: "/projects/dispatch-command-centre",
     visual: <DispatchVisual />,
   },
   {
