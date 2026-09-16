@@ -292,6 +292,8 @@ footer h2 { max-width:780px; font-size:clamp(40px,5vw,68px); }
 .gallery-card h2 { margin:17px 0 13px; font-family:Georgia,serif; font-size:32px; font-weight:400; }
 .gallery-card-copy>p { min-height:70px; margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
 .card-link,.card-status { display:inline-block; margin-top:25px; padding-bottom:6px; border-bottom:1px solid var(--line); color:#d8c398; font-size:12px; }
+.card-actions { display:flex; flex-wrap:wrap; gap:22px; }
+.card-actions .card-link,.card-actions .card-status { margin-top:25px; }
 .subpage-footer { display:flex; justify-content:space-between; padding-top:24px; padding-bottom:24px; border-top:1px solid var(--line); color:var(--muted); font-family:monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
 .references-intro { max-width:900px; margin:0 auto; padding-top:140px; padding-bottom:120px; text-align:center; }
 .references-intro .section-index { margin-bottom:26px; }
@@ -332,3 +334,110 @@ footer h2 { max-width:780px; font-size:clamp(40px,5vw,68px); }
   .footer-bottom>div { justify-content:flex-start; flex-wrap:wrap; }
 }
 @media (prefers-reduced-motion:reduce) { .intro-loader { animation-duration:.01s; animation-delay:.2s; } .loader-mark span,.intro-loader>i { animation:none; } }
+
+/* EstateFlow case study */
+.estate-case-study { --estate-blue:#5a9fc5; --estate-teal:#62b7aa; --estate-violet:#9a80c8; --estate-gold:#d8ad68; }
+.estate-hero { padding-top:58px; padding-bottom:110px; }
+.estate-breadcrumb { display:flex; align-items:center; gap:10px; margin-bottom:78px; color:var(--muted); font-family:monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.estate-breadcrumb a:hover { color:var(--cream); }
+.estate-breadcrumb strong { color:var(--copper); font-weight:400; }
+.estate-hero-grid { display:grid; grid-template-columns:1.35fr .65fr; align-items:end; gap:90px; }
+.estate-status { display:inline-flex; align-items:center; gap:10px; margin-bottom:30px; color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.estate-status span { width:7px; height:7px; border-radius:50%; background:#75aa7d; box-shadow:0 0 0 5px rgba(117,170,125,.12); }
+.estate-hero h1 { margin:15px 0 20px; font-family:Georgia,serif; font-size:clamp(72px,10vw,138px); font-weight:400; letter-spacing:-.065em; line-height:.86; }
+.estate-deck { max-width:760px; margin:0; color:var(--muted); font-family:Georgia,serif; font-size:clamp(20px,2vw,27px); line-height:1.55; }
+.estate-actions { display:flex; flex-wrap:wrap; gap:15px; margin-top:38px; }
+.estate-actions .primary-button { display:inline-flex; align-items:center; gap:9px; }
+.secondary-button { display:inline-flex; align-items:center; padding:15px 21px; border:1px solid var(--line); color:var(--cream); font-size:13px; transition:border-color 180ms ease,background 180ms ease; }
+.secondary-button:hover { border-color:rgba(216,195,152,.55); background:rgba(216,195,152,.05); }
+.estate-hero-facts { border-top:1px solid var(--line); }
+.estate-hero-facts div { display:grid; grid-template-columns:.75fr 1.25fr; gap:18px; padding:18px 0; border-bottom:1px solid var(--line); }
+.estate-hero-facts span { color:var(--muted); font-family:monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+.estate-hero-facts strong { font-size:12px; font-weight:400; }
+.estate-pipeline { margin-top:90px; padding:28px; border:1px solid rgba(216,195,152,.2); background:radial-gradient(circle at 15% 20%,rgba(54,135,171,.14),transparent 35%),radial-gradient(circle at 85% 80%,rgba(200,157,88,.11),transparent 38%),#090b0d; }
+.estate-visual-top,.estate-visual-footer { display:flex; justify-content:space-between; color:rgba(243,238,228,.42); font-family:monospace; font-size:10px; letter-spacing:.1em; }
+.estate-pipeline-track { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding:50px 0; }
+.estate-stage-wrap { display:grid; grid-template-columns:1fr auto; align-items:center; gap:20px; }
+.estate-stage-wrap:last-child { grid-template-columns:1fr; }
+.estate-stage-wrap>i { color:rgba(216,195,152,.42); font-family:Georgia,serif; font-size:22px; font-style:normal; }
+.estate-stage { min-height:145px; padding:20px; border:1px solid var(--line); background:rgba(8,8,8,.72); }
+.estate-stage span,.estate-stage strong,.estate-stage small { display:block; }
+.estate-stage span { margin-bottom:36px; color:var(--copper); font-family:monospace; font-size:10px; }
+.estate-stage strong { margin-bottom:7px; font-family:Georgia,serif; font-size:20px; font-weight:400; }
+.estate-stage small { color:var(--muted); font-size:11px; }
+.estate-stage-blue { border-top:2px solid var(--estate-blue); }.estate-stage-teal { border-top:2px solid var(--estate-teal); }.estate-stage-violet { border-top:2px solid var(--estate-violet); }.estate-stage-gold { border-top:2px solid var(--estate-gold); }
+.estate-visual-footer { padding-top:18px; border-top:1px solid var(--line); }
+.estate-overview { padding:110px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#10100f; }
+.estate-overview-grid { display:grid; grid-template-columns:.9fr 1.25fr .65fr; gap:70px; }
+.estate-overview h2,.estate-section-heading h2,.estate-limitations h2,.estate-footer-cta h2 { margin:16px 0 0; font-family:Georgia,serif; font-size:clamp(36px,4.2vw,58px); font-weight:400; letter-spacing:-.045em; line-height:1.08; }
+.estate-narrative p,.estate-limitations-grid>div:last-child p { margin:0 0 22px; color:var(--muted); font-size:16px; line-height:1.8; }
+.estate-principle { align-self:start; padding:26px; border-top:2px solid var(--copper); background:#080808; }
+.estate-principle span { color:var(--copper); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+.estate-principle p { margin:22px 0 0; font-family:Georgia,serif; font-size:20px; line-height:1.55; }
+.estate-section { padding-top:120px; padding-bottom:120px; }
+.estate-section-heading { display:grid; grid-template-columns:.55fr 1.45fr; align-items:start; gap:55px; margin-bottom:64px; }
+.estate-section-heading h2 { margin:-9px 0 0; max-width:850px; }
+.estate-section-heading.compact { grid-template-columns:1fr; gap:18px; }
+.estate-section-heading.compact h2 { margin:0; }
+.estate-architecture-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.estate-architecture-grid article { min-height:280px; padding:28px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.estate-architecture-grid span { color:var(--copper); font-family:monospace; font-size:11px; }
+.estate-architecture-grid h3 { margin:62px 0 14px; font-family:Georgia,serif; font-size:25px; font-weight:400; }
+.estate-architecture-grid p { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+.estate-data-section { padding:120px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#0f1112; }
+.estate-data-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:90px; }
+.coverage-chart { padding:34px; border:1px solid var(--line); background:#090a0b; }
+.coverage-row { display:grid; grid-template-columns:120px 1fr 100px; align-items:center; gap:20px; padding:22px 0; }
+.coverage-row+ .coverage-row { border-top:1px solid var(--line); }
+.coverage-row div strong,.coverage-row div span { display:block; }.coverage-row div strong { margin-bottom:5px; font-family:Georgia,serif; font-size:20px; font-weight:400; }.coverage-row div span { color:var(--muted); font-size:11px; }
+.coverage-row>i { overflow:hidden; height:9px; background:rgba(243,238,228,.08); }.coverage-row>i b { display:block; height:100%; background:linear-gradient(90deg,var(--estate-blue),var(--estate-gold)); }
+.coverage-row em { color:var(--cream); font-family:monospace; font-size:11px; font-style:normal; text-align:right; }
+.coverage-note { margin:18px 0 0; color:var(--muted); font-size:12px; line-height:1.7; }
+.estate-source-cards { display:grid; align-content:start; gap:18px; padding-top:1px; }
+.estate-source-cards article { padding:28px; border:1px solid var(--line); background:#0a0a09; }
+.estate-source-cards article>span { color:var(--copper); font-family:monospace; font-size:10px; letter-spacing:.1em; }
+.estate-source-cards h3 { margin:22px 0 12px; font-family:Georgia,serif; font-size:23px; font-weight:400; }
+.estate-source-cards p { margin:0 0 20px; color:var(--muted); font-size:14px; line-height:1.7; }
+.estate-source-cards small { color:rgba(243,238,228,.5); font-family:monospace; font-size:10px; }
+.estate-metric-layout { display:grid; grid-template-columns:1.15fr .85fr; gap:40px; }
+.estate-metric-cards { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.estate-metric-cards article { min-height:190px; padding:25px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.estate-metric-cards span { color:var(--muted); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+.estate-metric-cards strong { display:block; margin:36px 0 9px; font-family:Georgia,serif; font-size:24px; font-weight:400; }
+.estate-metric-cards p { margin:0; color:var(--muted); font-size:13px; }
+.estate-formula-card { display:flex; flex-direction:column; justify-content:center; padding:42px; border:1px solid rgba(216,195,152,.28); background:radial-gradient(circle at 80% 20%,rgba(200,157,88,.13),transparent 38%),#090909; }
+.estate-formula-card>span { color:var(--copper); font-family:monospace; font-size:10px; letter-spacing:.1em; }
+.estate-formula-card>p { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:52px 0 22px; }.estate-formula-card>p strong { padding:12px 14px; border:1px solid var(--line); font-size:12px; font-weight:400; }.estate-formula-card>p b,.estate-formula-card>p i { color:var(--copper); font-family:Georgia,serif; font-size:18px; font-style:normal; font-weight:400; }
+.estate-formula-card h3 { margin:0 0 12px; font-family:Georgia,serif; font-size:30px; font-weight:400; }.estate-formula-card small { color:var(--muted); font-size:12px; line-height:1.6; }
+.estate-quality-section { padding:120px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#10100f; }
+.estate-quality-grid { display:grid; grid-template-columns:repeat(6,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.estate-quality-grid article { grid-column:span 2; display:grid; grid-template-columns:auto 1fr; gap:22px; min-height:190px; padding:27px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.estate-quality-grid article:nth-child(4),.estate-quality-grid article:nth-child(5) { grid-column:span 3; }
+.estate-quality-grid>article>span { color:var(--copper); font-family:monospace; font-size:11px; }
+.estate-quality-grid h3 { margin:0 0 12px; font-family:Georgia,serif; font-size:20px; font-weight:400; }.estate-quality-grid p { margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+.estate-progress-layout { display:grid; grid-template-columns:1.15fr .85fr; gap:70px; }
+.estate-milestones { border-top:1px solid var(--line); }
+.estate-milestones article { display:grid; grid-template-columns:12px 1fr; gap:22px; padding:24px 0; border-bottom:1px solid var(--line); }
+.estate-milestones article>i { width:8px; height:8px; margin-top:5px; border-radius:50%; background:#777; }.estate-milestones article.complete>i { background:#75aa7d; box-shadow:0 0 0 4px rgba(117,170,125,.1); }.estate-milestones article.next>i { background:var(--copper); box-shadow:0 0 0 4px rgba(200,173,124,.1); }
+.estate-milestones span { color:var(--muted); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }.estate-milestones h3 { margin:7px 0 7px; font-family:Georgia,serif; font-size:20px; font-weight:400; }.estate-milestones p { margin:0; color:var(--muted); font-size:13px; line-height:1.6; }
+.estate-next-card { align-self:start; padding:35px; border:1px solid var(--line); background:linear-gradient(145deg,#111820,#090909); }
+.estate-next-card h3 { margin:22px 0 14px; font-family:Georgia,serif; font-size:31px; font-weight:400; }.estate-next-card>p:not(.section-index) { margin:0 0 32px; color:var(--muted); font-size:14px; line-height:1.7; }.estate-next-card>div { display:flex; gap:15px; padding:16px 0; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }.estate-next-card>div span { color:var(--copper); font-family:monospace; }
+.estate-limitations { padding:110px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#080808; }.estate-limitations-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:100px; }
+.estate-footer-cta { display:flex; align-items:end; justify-content:space-between; gap:60px; padding-top:110px; padding-bottom:110px; }.estate-footer-cta>div { max-width:720px; }.estate-footer-cta h2 { margin-top:14px; }.estate-footer-cta>div>p:last-child { color:var(--muted); font-size:15px; line-height:1.7; }.estate-footer-cta>a { display:inline-flex; flex:0 0 auto; align-items:center; gap:9px; }
+
+@media (max-width:900px) {
+  .estate-hero-grid,.estate-overview-grid,.estate-data-grid,.estate-metric-layout,.estate-progress-layout,.estate-limitations-grid { grid-template-columns:1fr; gap:45px; }
+  .estate-pipeline-track { grid-template-columns:1fr 1fr; }
+  .estate-stage-wrap { grid-template-columns:1fr; }.estate-stage-wrap>i { display:none; }
+  .estate-architecture-grid { grid-template-columns:1fr 1fr; }
+  .estate-quality-grid { grid-template-columns:1fr 1fr; }.estate-quality-grid article,.estate-quality-grid article:nth-child(4),.estate-quality-grid article:nth-child(5) { grid-column:span 1; }
+  .estate-section-heading { grid-template-columns:1fr; gap:20px; }.estate-section-heading h2 { margin:0; }
+}
+@media (max-width:560px) {
+  .estate-hero { padding-top:38px; padding-bottom:80px; }.estate-breadcrumb { margin-bottom:50px; }.estate-hero h1 { font-size:68px; }.estate-deck { font-size:19px; }
+  .estate-hero-facts div { grid-template-columns:1fr; gap:7px; }.estate-pipeline { margin-top:60px; padding:18px; }.estate-pipeline-track { grid-template-columns:1fr; padding:35px 0; }.estate-stage { min-height:125px; }.estate-stage span { margin-bottom:26px; }.estate-visual-footer { gap:12px; font-size:8px; }
+  .estate-overview,.estate-data-section,.estate-quality-section { padding:80px 0; }.estate-section { padding-top:80px; padding-bottom:80px; }
+  .estate-architecture-grid,.estate-metric-cards,.estate-quality-grid { grid-template-columns:1fr; }.estate-architecture-grid article { min-height:230px; }.estate-architecture-grid h3 { margin-top:42px; }
+  .coverage-chart { padding:20px; }.coverage-row { grid-template-columns:1fr; gap:10px; }.coverage-row em { text-align:left; }
+  .estate-formula-card { padding:28px; }.estate-footer-cta { align-items:flex-start; flex-direction:column; padding-top:80px; padding-bottom:80px; }
+}

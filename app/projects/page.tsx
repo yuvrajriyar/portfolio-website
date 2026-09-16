@@ -31,6 +31,7 @@ const projects = [
     description: "A solo data-engineering and analytics project that profiles and reshapes Zillow home-value and rent data, models it in PostgreSQL at the ZIP-month grain, and produces validated market-comparison metrics. The Power BI reporting layer is next.",
     stack: ["Python", "PostgreSQL", "SQL", "Docker", "Data quality"],
     href: "https://github.com/yuvrajriyar/EstateFlow",
+    detailsHref: "/projects/estateflow",
     visual: <EstateFlowVisual />,
   },
 ];
@@ -57,7 +58,10 @@ export default function ProjectsPage() {
               <h2>{project.title}</h2>
               <p>{project.description}</p>
               <div className="tag-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-              {project.href ? <a className="card-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a> : <span className="card-status">Private operational system</span>}
+              <div className="card-actions">
+                {project.detailsHref ? <Link className="card-link" href={project.detailsHref}>View case study →</Link> : null}
+                {project.href ? <a className="card-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a> : <span className="card-status">Private operational system</span>}
+              </div>
             </div>
           </article>
         ))}

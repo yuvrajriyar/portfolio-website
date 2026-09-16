@@ -83,7 +83,7 @@ export default function Home() {
           </article>
           <article className="featured-project-card estateflow-card">
             <EstateFlowVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">End-to-end data pipeline</p><h3>EstateFlow</h3><p>A housing-market pipeline transforming Zillow home-value and rent data into validated ZIP-month investment metrics.</p><a href="https://github.com/yuvrajriyar/EstateFlow" target="_blank" rel="noreferrer">View repository <ArrowUpRight /></a></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">End-to-end data pipeline</p><h3>EstateFlow</h3><p>A housing-market pipeline transforming Zillow home-value and rent data into validated ZIP-month investment metrics.</p><Link href="/projects/estateflow">View case study <ArrowUpRight /></Link></div>
           </article>
         </div>
       </section>
