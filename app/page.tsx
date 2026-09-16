@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ContactForm from "./contact-form";
 import IntroLoader from "./intro-loader";
-import { DispatchVisual, NBAVisual, PipelineVisual, ProTechVisual } from "./project-visuals";
+import { DispatchVisual, EstateFlowVisual, NBAVisual, ProTechVisual } from "./project-visuals";
 
 const skills = [
   { mark: "SQL", name: "SQL", detail: "Queries & analysis" },
@@ -81,9 +81,9 @@ export default function Home() {
             <DispatchVisual />
             <div className="featured-project-copy"><p className="project-eyebrow">Soaring Roadlines Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><span>Private operational system</span></div>
           </article>
-          <article className="featured-project-card">
-            <PipelineVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">Next flagship build</p><h3>Financial Data Pipeline</h3><p>An end-to-end solo project in development around reconciliation, SQL transformation, data-quality testing, and Power BI reporting.</p><span>In development</span></div>
+          <article className="featured-project-card estateflow-card">
+            <EstateFlowVisual />
+            <div className="featured-project-copy"><p className="project-eyebrow">End-to-end data pipeline</p><h3>EstateFlow</h3><p>A housing-market pipeline transforming Zillow home-value and rent data into validated ZIP-month investment metrics.</p><a href="https://github.com/yuvrajriyar/EstateFlow" target="_blank" rel="noreferrer">View repository <ArrowUpRight /></a></div>
           </article>
         </div>
       </section>
