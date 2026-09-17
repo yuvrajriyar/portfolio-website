@@ -44,9 +44,15 @@ export default function Home() {
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
           <div className="availability"><span className="pulse" />California · Open to opportunities</div>
-          <p className="kicker">Executive summary</p>
-          <h1>Applied Statistics graduate with a natural instinct for finding the signal in the noise.</h1>
-          <p className="hero-summary">Curious, disciplined, and self-starting, I bring practical experience across sports technology, transportation operations, and financial analysis. I learn quickly, take ownership, and care about turning complex information into decisions that help people act with confidence.</p>
+          <p className="kicker">Introduction</p>
+          <h1>I&apos;m Yuvraj Riyar.</h1>
+          <p className="hero-reflection">I have always wanted to understand what sits beneath the obvious answer.</p>
+          <p className="hero-summary">I&apos;m a recent UC Davis graduate in Applied Statistics with a minor in Managerial Economics. My background combines analytics, statistics, and business through work in sports technology, transportation operations, financial analysis, and end-to-end data systems.</p>
+          <div className="hero-details" aria-label="Professional background">
+            <div><span>Education</span><strong>UC Davis · Applied Statistics</strong></div>
+            <div><span>Focus</span><strong>Data, business &amp; operations</strong></div>
+            <div><span>Approach</span><strong>Curious, thorough &amp; practical</strong></div>
+          </div>
           <div className="hero-actions">
             <Link className="primary-button" href="/projects">See my projects</Link>
             <a className="secondary-button" href="/Yuvraj-Riyar-Resume.pdf" target="_blank" rel="noreferrer">View résumé <span>↗</span></a>
@@ -60,13 +66,13 @@ export default function Home() {
         </aside>
       </section>
 
-      <div className="signal-strip" aria-label="Personal qualities"><span>Self-starter</span><span>Impact-driven</span><span>Curious</span><span>Ambitious</span></div>
+      <div className="signal-strip" aria-label="Personal qualities"><span>Observant</span><span>Self-starting</span><span>Impact-driven</span><span>People-oriented</span></div>
 
       <section id="work" className="section-shell section-block home-projects">
         <div className="section-heading">
           <p className="section-index">01 / Portfolio</p>
-          <h2>Work I&apos;m proud to stand behind.</h2>
-          <p>My favourite projects begin with a messy, practical problem and end with something a coach, dispatcher, or analyst can actually use.</p>
+          <h2>Projects shaped by real questions.</h2>
+          <p>Each began with something worth understanding properly, then became a practical system, analysis, or tool someone could use.</p>
         </div>
         <div className="featured-project-grid">
           <article className="featured-project-card">
@@ -90,7 +96,7 @@ export default function Home() {
 
       <section id="skills" className="skills-section">
         <div className="section-shell section-block">
-          <div className="skills-heading"><div><p className="section-index">02 / Skills</p><h2>Technical range, applied with purpose.</h2></div><p>Tools I&apos;ve used across analytics, engineering, visualisation, product work, and professional communication.</p></div>
+          <div className="skills-heading"><div><p className="section-index">02 / Skills</p><h2>The tools behind the work.</h2></div><p>A working toolkit built across analytics, engineering, visualisation, product development, and communication.</p></div>
           <div className="skills-grid">
             {skills.map((skill) => <article className="skill-card" key={skill.name}><div className="skill-mark">{skill.mark}</div><div><h3>{skill.name}</h3><p>{skill.detail}</p></div></article>)}
           </div>
@@ -99,14 +105,14 @@ export default function Home() {
 
       <section id="experience" className="experience-section">
         <div className="section-shell section-block">
-          <div className="section-heading compact-heading"><p className="section-index">03 / Experience</p><h2>Technical work, grounded in operations.</h2></div>
+          <div className="section-heading compact-heading"><p className="section-index">03 / Experience</p><h2>Where the work comes from.</h2></div>
           <div className="experience-grid">
             <div className="timeline">
               <article><p className="timeline-date">2025 · 2026</p><h3>Aggie Sports Analytics</h3><p className="timeline-role">Project Lead · Data &amp; Front-End Contributor</p><p>Coordinated a multidisciplinary team and helped deliver athlete-performance tooling for UC Davis Football staff.</p></article>
               <article><p className="timeline-date">Operations</p><h3>Soaring Roadlines Inc.</h3><p className="timeline-role">Operations &amp; Data Analytics</p><p>Supported load tracking, cost and margin analysis, reconciliation, and dispatch decisions for my family&apos;s transportation business.</p></article>
               <article><p className="timeline-date">Class of 2026</p><h3>University of California, Davis</h3><p className="timeline-role">B.S. Applied Statistics · Minor in Managerial Economics</p><p>Built a foundation in statistical modelling, forecasting, econometrics, data analysis, and quantitative decision-making.</p></article>
             </div>
-            <div className="personal-note-card"><p className="capability-label">A little beyond the résumé</p><p>I&apos;m drawn to work that combines technical depth with real-world judgement. Sports, transportation, financial systems, and business operations all interest me for the same reason: the numbers only matter when they help someone act.</p></div>
+            <div className="personal-note-card"><p className="capability-label">How I think</p><p>I enjoy getting close to how a business or system actually works. The numbers matter, but so do the people using them, the judgement behind the decision, and whether the answer holds up in practice.</p></div>
           </div>
         </div>
       </section>
@@ -114,11 +120,11 @@ export default function Home() {
       <section id="about" className="section-shell about-section">
         <div className="about-label"><p className="section-index">04 / About</p></div>
         <div className="about-copy">
-          <p className="about-lead">I was an analyst before I knew it was a career.</p>
+          <p className="about-lead">The instinct came before the degree.</p>
           <div className="about-story">
-            <p>I have always been the person who researches the options, asks one more question, and turns over every rock before making a decision, whether the stakes are small or substantial. I first recognised that instinct as a real passion in high school, when I discovered that data could turn curiosity into a practical way of understanding people, systems, and outcomes.</p>
-            <p>That instinct led me to UC Davis, where I studied Applied Statistics and Managerial Economics, and then into work spanning athlete performance, transportation operations, and financial analysis. I enjoy getting close to how a system actually works, finding what others may have overlooked, and translating the evidence into a clearer next move. I bring discipline, ownership, and a willingness to learn quickly, especially when the work carries real responsibility.</p>
-            <p>Outside work and school, sport is a constant. I am a devoted Raiders and Warriors fan, and I enjoy weightlifting, basketball, golf, and playing soccer with Aggie Sports Analytics. I love travelling, exploring different cultures, and seeing how people approach life beyond what is familiar to me. At home, I am usually experimenting with Neapolitan pizza or dialling in a new coffee at my espresso bar. Across all of it, the thread is the same: curiosity, attention to detail, and genuine enjoyment of the process.</p>
+            <p>I have always been the person who researches every option, asks one more question, and turns over every rock before making a decision, whether I am comparing something small or working through a serious problem. In high school, I realised that statistics gave that instinct a language. Curiosity could become evidence, and evidence could lead to a better decision.</p>
+            <p>That realisation took me to UC Davis, where I studied Applied Statistics alongside Managerial Economics. Since then, I have applied the same way of thinking to athlete performance, transportation operations, housing data, and financial analysis. I like learning how a system works from the inside, noticing what may have been overlooked, and building an answer that remains useful beyond the presentation.</p>
+            <p>I am equally shaped by what happens away from a screen. I am competitive about sport, devoted to the Raiders and Warriors, and happiest around good friends and new experiences. I play soccer, lift, follow basketball and golf, and love travelling because unfamiliar places and cultures change how you see your own. At home, that curiosity usually becomes Neapolitan pizza or an espresso I am still trying to perfect. I care about craft, conversation, and enjoying the process as much as the result.</p>
           </div>
           <div className="about-gallery" aria-label="Life outside work and school">
             <figure className="about-gallery-card about-gallery-wide">
