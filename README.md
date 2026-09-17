@@ -10,10 +10,10 @@ The site combines a concise professional introduction with a more personal accou
 
 - A visual project portfolio with every project displayed
 - A ProTech gallery featuring the platform, team, and case-competition presentation
-- NBA injury-risk and transportation analytics case studies
+- NBA injury-risk, King County housing, and transportation analytics case studies
 - EstateFlow, an end-to-end housing-market analytics pipeline
 - A clear visual overview of technical and design tools
-- Résumé, GitHub, LinkedIn, contact, and references sections
+- A detailed experience, education, technical-skills, résumé, GitHub, LinkedIn, contact, and references profile
 - Personal interests including sports, travel, Neapolitan pizza, and espresso
 
 ## Technology

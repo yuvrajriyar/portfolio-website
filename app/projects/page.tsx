@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DispatchVisual, EstateFlowVisual, NBAVisual, ProTechVisual } from "../project-visuals";
+import { DispatchVisual, EstateFlowVisual, HousingRegressionVisual, NBAVisual, ProTechVisual } from "../project-visuals";
 
 const projects = [
   {
@@ -21,7 +21,7 @@ const projects = [
     visual: <ProTechVisual />,
   },
   {
-    eyebrow: "Operations analytics · Soaring Roadlines Inc.",
+    eyebrow: "Operations analytics · Soaring Eagle Inc.",
     title: "Dispatch Command Centre",
     description: "A practical dispatch tool for tracking active loads across a 20-truck fleet, estimating empty dates, prioritising backloads, and making twice-daily planning easier.",
     stack: ["Python", "Streamlit", "SQLite", "Pandas"],
@@ -36,6 +36,14 @@ const projects = [
     href: "https://github.com/yuvrajriyar/STA-141A-NBA-INJURIES",
     detailsHref: "/projects/nba-injury-risk",
     visual: <NBAVisual />,
+  },
+  {
+    eyebrow: "Housing economics · Statistical modelling",
+    title: "King County Housing Market Analysis",
+    description: "A multiple-linear-regression study of roughly 15,000 home sales, examining how structural, quality, and geographic characteristics influence sale prices and testing which findings remain defensible under model diagnostics.",
+    stack: ["R", "Multiple regression", "ANOVA", "Diagnostics"],
+    detailsHref: "/projects/king-county-housing",
+    visual: <HousingRegressionVisual />,
   },
 ];
 

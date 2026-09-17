@@ -22,6 +22,14 @@ const skills = [
   { mark: "PP", name: "PowerPoint", detail: "Presentation design" },
 ];
 
+const skillGroups = [
+  { label: "Languages & data", items: "SQL, Python, R, PostgreSQL, SQLite, Microsoft Excel" },
+  { label: "Analytics", items: "Regression, forecasting, time series, statistical testing, machine learning, data visualisation, dashboard development, financial and operational analysis" },
+  { label: "Data engineering", items: "ETL and ELT workflows, data pipelines, transformation, modelling, cleaning, validation, data quality, and reconciliation" },
+  { label: "Tools & libraries", items: "Pandas, scikit-learn, XGBoost, Power BI, Tableau, Alteryx, Streamlit, React, Supabase, Docker, Git and GitHub, Jupyter, and RStudio" },
+  { label: "AI & automation", items: "AI-native workflows, prompt engineering, AI-assisted research, coding, documentation, workflow automation, and output validation using Claude, ChatGPT, Codex, and Cursor" },
+];
+
 function ArrowUpRight() {
   return <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" strokeWidth="1.7" /></svg>;
 }
@@ -85,7 +93,7 @@ export default function Home() {
           </article>
           <article className="featured-project-card">
             <DispatchVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">Soaring Roadlines Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><Link href="/projects/dispatch-command-centre">View case study <ArrowUpRight /></Link></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">Soaring Eagle Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><Link href="/projects/dispatch-command-centre">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
             <NBAVisual />
@@ -100,6 +108,9 @@ export default function Home() {
           <div className="skills-grid">
             {skills.map((skill) => <article className="skill-card" key={skill.name}><div className="skill-mark">{skill.mark}</div><div><h3>{skill.name}</h3><p>{skill.detail}</p></div></article>)}
           </div>
+          <div className="skill-depth" aria-label="Detailed technical capabilities">
+            {skillGroups.map((group) => <article key={group.label}><h3>{group.label}</h3><p>{group.items}</p></article>)}
+          </div>
         </div>
       </section>
 
@@ -108,11 +119,23 @@ export default function Home() {
           <div className="section-heading compact-heading"><p className="section-index">03 / Experience</p><h2>Where the work comes from.</h2></div>
           <div className="experience-grid">
             <div className="timeline">
-              <article><p className="timeline-date">2025 · 2026</p><h3>Aggie Sports Analytics</h3><p className="timeline-role">Project Lead · Data &amp; Front-End Contributor</p><p>Coordinated a multidisciplinary team and helped deliver athlete-performance tooling for UC Davis Football staff.</p></article>
-              <article><p className="timeline-date">Operations</p><h3>Soaring Roadlines Inc.</h3><p className="timeline-role">Operations &amp; Data Analytics</p><p>Supported load tracking, cost and margin analysis, reconciliation, and dispatch decisions for my family&apos;s transportation business.</p></article>
-              <article><p className="timeline-date">Class of 2026</p><h3>University of California, Davis</h3><p className="timeline-role">B.S. Statistics (Applied) · Minor in Managerial Economics</p><p>Built a foundation in statistical modelling, forecasting, econometrics, data analysis, and quantitative decision-making.</p></article>
+              <article>
+                <p className="timeline-date">Jun 2026 · Present</p><h3>Soaring Eagle Inc.</h3><p className="timeline-role">Operations &amp; Financial Analyst · Fresno, California</p>
+                <ul className="timeline-details"><li>Built a Python, Streamlit, SQLite, and Pandas dispatch application that cut routine fleet-tracking time by roughly 50% across 20 trucks while making ETAs, empty dates, and backhaul priorities easier to act on.</li><li>Turned revenue, gross profit, fuel, and transportation-expense data into decision-ready Excel visuals for load, truck, and route profitability reviews.</li><li>Improved freight-record accuracy and operational visibility through transaction reconciliation, broker follow-ups, and twice-daily load-record reviews.</li></ul>
+              </article>
+              <article>
+                <p className="timeline-date">Sep 2025 · Jun 2026</p><h3>Aggie Sports Analytics</h3><p className="timeline-role">Data Analyst · Davis, California</p>
+                <ul className="timeline-details"><li>Led a six-member cross-functional team delivering an athlete-performance platform now used by UC Davis Football coaching and strength staff.</li><li>Managed priorities and development workflows while contributing React visualisations, Supabase uploads, and data-quality validation across multi-year athlete records.</li><li>Presented player- and position-level findings to coaches, translating dashboard output into practical training conversations.</li></ul>
+              </article>
+              <article>
+                <p className="timeline-date">Sep 2022 · Jun 2026</p><h3>University of California, Davis</h3><p className="timeline-role">B.S. Statistics (Applied) · Minor in Managerial Economics</p>
+                <p>Coursework included regression and statistical modelling, time series and forecasting, statistical data science, econometrics, operations research, and financial economics.</p>
+              </article>
             </div>
-            <div className="personal-note-card"><p className="capability-label">How I think</p><p>I enjoy getting close to how a business or system actually works. The numbers matter, but so do the people using them, the judgement behind the decision, and whether the answer holds up in practice.</p></div>
+            <div className="experience-aside">
+              <div className="personal-note-card"><p className="capability-label">How I work</p><p>I get close to how a business or system actually operates before deciding what to build. The numbers matter, but so do the people using them, the judgement behind the decision, and whether the answer holds up in practice.</p></div>
+              <div className="personal-note-card"><p className="capability-label">Current direction</p><p>I am building further depth in ETL workflows, data pipelines, transformation, validation, and end-to-end analytics systems while continuing to apply statistics and business judgement to practical decisions.</p></div>
+            </div>
           </div>
         </div>
       </section>

@@ -48,6 +48,25 @@ export function NBAVisual() {
   );
 }
 
+export function HousingRegressionVisual() {
+  return (
+    <div className="project-visual housing-visual" aria-label="King County housing regression summary showing sample size, explained variance, and leading price drivers">
+      <div className="visual-topline"><span>KING COUNTY HOUSING</span><span>REGRESSION STUDY</span></div>
+      <div className="housing-overview">
+        <div className="housing-kpi"><span>HOME SALES</span><strong>15K</strong><small>observations analysed</small></div>
+        <div className="housing-kpi housing-kpi-accent"><span>EXPLAINED VARIANCE</span><strong>55.7%</strong><small>structural model</small></div>
+        <div className="housing-drivers">
+          <p>Leading price drivers</p>
+          <div><span>Construction grade</span><i><b style={{ width: "92%" }} /></i></div>
+          <div><span>Living space</span><i><b style={{ width: "84%" }} /></i></div>
+          <div><span>Location &amp; quality</span><i><b style={{ width: "69%" }} /></i></div>
+        </div>
+      </div>
+      <div className="metric-ribbon"><span>INTERACTIONS</span><span>ANOVA / F-TESTS</span><span>DIAGNOSTICS</span></div>
+    </div>
+  );
+}
+
 export function PipelineVisual() {
   return (
     <div className="project-visual pipeline-visual" aria-label="Stylised financial data pipeline preview">

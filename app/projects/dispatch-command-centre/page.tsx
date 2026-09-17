@@ -13,7 +13,7 @@ export default function DispatchPage() {
       <CaseStudyHeader />
       <CaseStudyHero
         status="Active private operational system"
-        eyebrow="Operations analytics · Soaring Roadlines Inc."
+        eyebrow="Operations analytics · Soaring Eagle Inc."
         title="Dispatch Command Centre"
         deck="A practical fleet-visibility tool that converts twice-daily dispatch updates into clearer priorities for active loads, empty dates, and backhaul searches."
         facts={[
