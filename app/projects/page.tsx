@@ -3,6 +3,15 @@ import { DispatchVisual, EstateFlowVisual, NBAVisual, ProTechVisual } from "../p
 
 const projects = [
   {
+    eyebrow: "Housing analytics · End-to-end pipeline",
+    title: "EstateFlow",
+    description: "A solo data-engineering and analytics project that profiles and reshapes Zillow home-value and rent data, models it in PostgreSQL at the ZIP-month grain, and produces validated market-comparison metrics. The Power BI reporting layer is next.",
+    stack: ["Python", "PostgreSQL", "SQL", "Docker", "Data quality"],
+    href: "https://github.com/yuvrajriyar/EstateFlow",
+    detailsHref: "/projects/estateflow",
+    visual: <EstateFlowVisual />,
+  },
+  {
     eyebrow: "Athlete performance",
     title: "ProTech",
     description: "A full-stack athlete performance platform built with Aggie Sports Analytics for UC Davis Football staff. My work covered project coordination, data visualisation, Supabase workflows, validation, and front-end features.",
@@ -10,15 +19,6 @@ const projects = [
     href: "https://github.com/AggieSportsAnalytics/ProTech",
     detailsHref: "/projects/protech",
     visual: <ProTechVisual />,
-  },
-  {
-    eyebrow: "Statistical modelling",
-    title: "NBA Injury Risk Analysis",
-    description: "A team academic analysis examining NBA injury risk through player characteristics, workload, and injury-history data, with reproducible modelling and documentation in R.",
-    stack: ["R", "Statistics", "Data cleaning", "Visualisation"],
-    href: "https://github.com/yuvrajriyar/STA-141A-NBA-INJURIES",
-    detailsHref: "/projects/nba-injury-risk",
-    visual: <NBAVisual />,
   },
   {
     eyebrow: "Operations analytics · Soaring Roadlines Inc.",
@@ -29,13 +29,13 @@ const projects = [
     visual: <DispatchVisual />,
   },
   {
-    eyebrow: "Housing analytics · End-to-end pipeline",
-    title: "EstateFlow",
-    description: "A solo data-engineering and analytics project that profiles and reshapes Zillow home-value and rent data, models it in PostgreSQL at the ZIP-month grain, and produces validated market-comparison metrics. The Power BI reporting layer is next.",
-    stack: ["Python", "PostgreSQL", "SQL", "Docker", "Data quality"],
-    href: "https://github.com/yuvrajriyar/EstateFlow",
-    detailsHref: "/projects/estateflow",
-    visual: <EstateFlowVisual />,
+    eyebrow: "Statistical modelling",
+    title: "NBA Injury Risk Analysis",
+    description: "A team academic analysis examining NBA injury risk through player characteristics, workload, and injury-history data, with reproducible modelling and documentation in R.",
+    stack: ["R", "Statistics", "Data cleaning", "Visualisation"],
+    href: "https://github.com/yuvrajriyar/STA-141A-NBA-INJURIES",
+    detailsHref: "/projects/nba-injury-risk",
+    visual: <NBAVisual />,
   },
 ];
 
