@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Yuvraj Riyar | Data & Business Analytics",
-  description: "Portfolio of Yuvraj Riyar, a UC Davis Applied Statistics graduate building analytics systems across sports, operations, and financial decision-making.",
+  description: "Portfolio of Yuvraj Riyar, a UC Davis Statistics (Applied) graduate building analytics systems across sports, operations, and financial decision-making.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
