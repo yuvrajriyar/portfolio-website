@@ -23,11 +23,11 @@ const skills = [
 ];
 
 const skillGroups = [
-  { label: "Languages & data", items: "SQL, Python, R, PostgreSQL, SQLite, Microsoft Excel" },
-  { label: "Analytics", items: "Regression, forecasting, time series, statistical testing, machine learning, data visualisation, dashboard development, financial and operational analysis" },
-  { label: "Data engineering", items: "ETL and ELT workflows, data pipelines, transformation, modelling, cleaning, validation, data quality, and reconciliation" },
-  { label: "Tools & libraries", items: "Pandas, scikit-learn, XGBoost, Power BI, Tableau, Alteryx, Streamlit, React, Supabase, Docker, Git and GitHub, Jupyter, and RStudio" },
-  { label: "AI & automation", items: "AI-native workflows, prompt engineering, AI-assisted research, coding, documentation, workflow automation, and output validation using Claude, ChatGPT, Codex, and Cursor" },
+  { label: "Working with data", items: "SQL, Python, and R are the core of my analytical work, supported by PostgreSQL, SQLite, and Excel when the problem calls for structured data, operational detail, or financial context." },
+  { label: "Finding the answer", items: "I use regression, forecasting, time series, statistical testing, machine learning, and visual analysis to move from a broad question to a conclusion that can be explained and challenged." },
+  { label: "Building the system", items: "My recent work has moved further into ETL and ELT workflows, pipelines, transformation, modelling, validation, reconciliation, and the quality controls that keep analysis trustworthy." },
+  { label: "Making it usable", items: "Power BI, Tableau, Alteryx, Streamlit, React, and Supabase help me turn the underlying work into dashboards, applications, and reporting that people can actually use." },
+  { label: "AI in the workflow", items: "I use Claude, ChatGPT, Codex, and Cursor to accelerate research, coding, documentation, and repetitive work, then validate the logic and final output myself." },
 ];
 
 function ArrowUpRight() {
@@ -121,15 +121,17 @@ export default function Home() {
             <div className="timeline">
               <article>
                 <p className="timeline-date">Jun 2026 · Present</p><h3>Soaring Eagle Inc.</h3><p className="timeline-role">Operations &amp; Financial Analyst · Fresno, California</p>
-                <ul className="timeline-details"><li>Built a Python, Streamlit, SQLite, and Pandas dispatch application that cut routine fleet-tracking time by roughly 50% across 20 trucks while making ETAs, empty dates, and backhaul priorities easier to act on.</li><li>Turned revenue, gross profit, fuel, and transportation-expense data into decision-ready Excel visuals for load, truck, and route profitability reviews.</li><li>Improved freight-record accuracy and operational visibility through transaction reconciliation, broker follow-ups, and twice-daily load-record reviews.</li></ul>
+                <div className="experience-story"><p>Working inside a family transportation business has made analytics very concrete. A late follow-up can leave a truck idle, an incomplete record can distort a margin, and a useful answer needs to fit the pace of the operation.</p><p>I built a dispatch application in Python and Streamlit that brings ETAs, empty dates, and backhaul priorities for roughly 20 trucks into one view. It cut the routine tracking process by about half and made the morning and afternoon reviews far more focused. Alongside it, I analyse revenue, gross profit, fuel, and transportation costs in Excel and keep the underlying freight records current through reconciliation and broker follow-ups.</p></div>
+                <div className="experience-evidence"><span><strong>≈50%</strong> less routine tracking time</span><span><strong>20</strong> trucks in one operating view</span><span><strong>2× daily</strong> review rhythm</span></div>
               </article>
               <article>
                 <p className="timeline-date">Sep 2025 · Jun 2026</p><h3>Aggie Sports Analytics</h3><p className="timeline-role">Data Analyst · Davis, California</p>
-                <ul className="timeline-details"><li>Led a six-member cross-functional team delivering an athlete-performance platform now used by UC Davis Football coaching and strength staff.</li><li>Managed priorities and development workflows while contributing React visualisations, Supabase uploads, and data-quality validation across multi-year athlete records.</li><li>Presented player- and position-level findings to coaches, translating dashboard output into practical training conversations.</li></ul>
+                <div className="experience-story"><p>ProTech was my first chance to help take an analytical product from an open-ended stakeholder problem to something used inside a real programme. I led a six-person team working with UC Davis Football and helped shape the priorities, development rhythm, and final delivery.</p><p>My contribution crossed product and technical work: React visualisations, Supabase uploads, multi-year record validation, athlete profiles, and player- and position-level views. Presenting the platform to coaches reinforced an important lesson for me: the work is only complete when the person making the decision can understand and use it.</p></div>
+                <div className="experience-evidence"><span><strong>6</strong> cross-functional contributors</span><span><strong>Multi-year</strong> athlete records</span><span><strong>Delivered</strong> to football staff</span></div>
               </article>
               <article>
                 <p className="timeline-date">Sep 2022 · Jun 2026</p><h3>University of California, Davis</h3><p className="timeline-role">B.S. Statistics (Applied) · Minor in Managerial Economics</p>
-                <p>Coursework included regression and statistical modelling, time series and forecasting, statistical data science, econometrics, operations research, and financial economics.</p>
+                <div className="experience-story"><p>Statistics gave structure to the way I already approached decisions, while managerial economics made me think more carefully about the business behind the numbers. My coursework covered regression and statistical modelling, time series and forecasting, statistical data science, econometrics, operations research, and financial economics.</p></div>
               </article>
             </div>
             <div className="experience-aside">
