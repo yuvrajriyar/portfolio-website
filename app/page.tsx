@@ -159,6 +159,7 @@ export default function Home() {
             <figure className="about-gallery-card">
               <img src="/neapolitan-pizza.jpeg" alt="A Neapolitan pizza made by Yuvraj at home" />
               <figcaption><span>Craft</span><strong>Neapolitan pizza, made at home</strong></figcaption>
+              <Link href="/a-little-flour" className="pizza-secret-link" aria-label="Follow my pizza-making journey" prefetch={false} />
             </figure>
           </div>
         </div>

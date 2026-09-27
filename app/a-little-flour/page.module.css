@@ -1,0 +1,10 @@
+.room{min-height:100svh;display:grid;place-items:center;padding:80px 28px;background:var(--paper)}
+.note{width:min(100%,540px)}
+.aside{color:var(--copper)!important;font:italic 18px/1.6 Georgia,serif!important;margin-bottom:24px!important}
+.note h1{font:400 clamp(36px,6vw,55px)/1.12 Georgia,serif;letter-spacing:-.035em;margin:0 0 30px;color:var(--cream)}
+.note p{color:var(--muted);font:17px/1.8 Arial,sans-serif;margin:0 0 22px}
+.journal{display:inline-flex;align-items:center;gap:18px;border-bottom:1px solid var(--copper);padding:12px 0;margin-top:8px;font:17px/1.6 Georgia,serif;color:var(--cream)}
+.journal:hover{color:var(--copper)}
+.back{display:block;width:fit-content;margin-top:58px;padding:10px 0;color:var(--muted);font:14px/1.6 Arial,sans-serif}
+.back:hover{color:var(--cream)}
+.note a:focus-visible{outline:2px solid var(--copper);outline-offset:7px}

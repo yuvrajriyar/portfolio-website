@@ -100,6 +100,8 @@ a { color:inherit; text-decoration:none; }
 .about-gallery-wide img { object-position:center 47%; }
 .about-gallery-card:not(.about-gallery-wide) img { object-position:center 48%; }
 .about-gallery-card:hover img { transform:scale(1.025); filter:saturate(1.08); }
+.pizza-secret-link { position:absolute; inset:0; z-index:2; }
+.pizza-secret-link:focus-visible { outline:2px solid var(--copper); outline-offset:-6px; }
 .about-gallery-card figcaption { position:absolute; z-index:1; right:24px; bottom:22px; left:24px; }
 .about-gallery-card figcaption span,.about-gallery-card figcaption strong { display:block; }
 .about-gallery-card figcaption span { margin-bottom:7px; color:#d8c398; font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
