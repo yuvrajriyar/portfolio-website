@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "EstateFlow Case Study | Yuvraj Riyar",
-  description: "How EstateFlow transforms Zillow housing data into validated ZIP-month market metrics using Python, PostgreSQL, SQL and Docker.",
+  description: "An end-to-end housing-market analytics system, from Zillow data through Python and PostgreSQL into an interactive Power BI market explorer.",
 };
 
 const qualityChecks = [
@@ -17,9 +17,10 @@ const qualityChecks = [
 const milestones = [
   { status: "complete", title: "Environment and database", detail: "Python 3.12, uv, Docker Compose and PostgreSQL 17." },
   { status: "complete", title: "Source research", detail: "ZHVI and ZORI coverage, grain, limitations and missingness documented." },
-  { status: "complete", title: "Transformation layer", detail: "Wide monthly source files reshaped into validated ZIP-month records." },
-  { status: "complete", title: "Analytical mart", detail: "Home values and rents joined with two derived market metrics." },
-  { status: "next", title: "Dashboard and automation", detail: "Power BI reporting, market rankings and a repeatable pipeline runner." },
+  { status: "complete", title: "Repeatable data pipeline", detail: "Automated ZHVI and ZORI loading, transformations, marts and SQL quality checks through one runner." },
+  { status: "complete", title: "Market analytics", detail: "Historical and latest-ZIP marts with annualised rent, gross rent-to-value, and year-over-year movement." },
+  { status: "complete", title: "Power BI report", detail: "National overview, state and metro explorer, and a plain-English reader's guide." },
+  { status: "next", title: "Forecasting and CI", detail: "Back-test a statistical forecast with uncertainty intervals and add an automated CI test run." },
 ];
 
 function ExternalArrow() {
@@ -67,10 +68,10 @@ export default function EstateFlowPage() {
         <div className="estate-breadcrumb"><Link href="/projects">Portfolio</Link><span>/</span><strong>EstateFlow</strong></div>
         <div className="estate-hero-grid">
           <div>
-            <div className="estate-status"><span /> Active development</div>
-            <p className="section-index">Solo data pipeline project</p>
+            <div className="estate-status"><span /> Active project · dashboard available</div>
+            <p className="section-index">Independent analytics and data engineering</p>
             <h1>EstateFlow</h1>
-            <p className="estate-deck">A housing-market analytics pipeline built to turn large, inconsistent public datasets into reliable comparisons across ZIP codes and time.</p>
+            <p className="estate-deck">A working analytics system that takes Zillow home-value and rent data through Python and PostgreSQL into a Power BI report for comparing housing markets across the United States.</p>
             <div className="estate-actions">
               <a className="primary-button" href="https://github.com/yuvrajriyar/EstateFlow" target="_blank" rel="noreferrer">View repository <ExternalArrow /></a>
               <a className="secondary-button" href="#architecture">Explore the pipeline</a>
@@ -80,7 +81,7 @@ export default function EstateFlowPage() {
             <div><span>Role</span><strong>Solo builder</strong></div>
             <div><span>Core grain</span><strong>ZIP × month</strong></div>
             <div><span>Data</span><strong>Zillow ZHVI + ZORI</strong></div>
-            <div><span>Stack</span><strong>Python · PostgreSQL · SQL</strong></div>
+            <div><span>Stack</span><strong>Python · PostgreSQL · Power BI</strong></div>
           </div>
         </div>
         <PipelineDiagram />
@@ -91,7 +92,7 @@ export default function EstateFlowPage() {
           <div><p className="section-index">01 / Overview</p><h2>From public files to a decision-ready market view.</h2></div>
           <div className="estate-narrative">
             <p>Housing data is plentiful, but comparing markets responsibly requires more than downloading a spreadsheet. Home-value and rent histories arrive with different coverage, wide monthly columns, missing observations and geographic inconsistencies.</p>
-            <p>EstateFlow creates a controlled path from those source files to one analytical model. The workflow profiles each dataset, reshapes it into a consistent ZIP-month grain, validates the records, joins compatible home-value and rent observations, and calculates transparent comparison metrics.</p>
+            <p>EstateFlow creates a controlled path from those files to two usable views: a historical ZIP-month model and a latest-market snapshot. Python profiles and reshapes the sources, PostgreSQL stages and joins them, SQL checks the grain and derived measures, and Power BI makes the result easier to explore.</p>
           </div>
           <aside className="estate-principle"><span>The design principle</span><p>Every reported metric should be traceable to its source and independently testable.</p></aside>
         </div>
@@ -103,7 +104,7 @@ export default function EstateFlowPage() {
           <article><span>01</span><h3>Source</h3><p>Zillow Home Value Index and Observed Rent Index files, accompanied by documented coverage and limitations.</p></article>
           <article><span>02</span><h3>Transform</h3><p>Python and pandas profile the sources, preserve ZIP codes, reshape dates and enforce row-level assertions.</p></article>
           <article><span>03</span><h3>Model</h3><p>PostgreSQL staging tables feed a shared intermediate view joined on ZIP code and month.</p></article>
-          <article><span>04</span><h3>Serve</h3><p>An analysis-ready mart exposes market measures for rankings, trends and future Power BI reporting.</p></article>
+          <article><span>04</span><h3>Explore</h3><p>Power BI reads the historical and latest-market marts for geographic filters, trends, growth comparisons, and ZIP-level screening.</p></article>
         </div>
       </section>
 
@@ -152,7 +153,7 @@ export default function EstateFlowPage() {
       </section>
 
       <section className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">06 / Progress</p><h2>A working foundation, with the reporting layer next.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">06 / Progress</p><h2>The pipeline and first report are working. Next comes validation over time.</h2></div>
         <div className="estate-progress-layout">
           <div className="estate-milestones">
             {milestones.map((milestone) => (
@@ -164,9 +165,9 @@ export default function EstateFlowPage() {
           </div>
           <aside className="estate-next-card">
             <p className="section-index">Next release</p>
-            <h3>Power BI market explorer</h3>
-            <p>The dashboard will turn the mart into a visual comparison tool for market rankings, time trends and geographic filtering.</p>
-            <div><span>01</span>Market ranking table</div><div><span>02</span>Value and rent trends</div><div><span>03</span>State, metro and ZIP filters</div>
+            <h3>Statistical forecasting</h3>
+            <p>The next analytical step is to compare forecast approaches for home values and rents, test them against held-out history, and communicate forecast uncertainty clearly.</p>
+            <div><span>01</span>Define a defensible target and horizon</div><div><span>02</span>Back-test against time-based holdouts</div><div><span>03</span>Show prediction intervals and limitations</div>
           </aside>
         </div>
       </section>
@@ -174,12 +175,12 @@ export default function EstateFlowPage() {
       <section className="estate-limitations">
         <div className="section-shell estate-limitations-grid">
           <div><p className="section-index">07 / Judgement</p><h2>What the metric does not claim.</h2></div>
-          <div><p>Gross rent-to-value percentage is useful for high-level comparison, but it does not account for financing, vacancy, taxes, insurance, maintenance or transaction costs. Zillow indices are modelled estimates, and rent coverage is materially narrower than home-value coverage.</p><p>Those limitations are documented intentionally so the eventual dashboard remains useful without pretending the data is more precise than it is.</p></div>
+          <div><p>Gross rent-to-value is useful for a first-pass comparison, but it is not net yield or cash flow. It does not account for financing, vacancy, taxes, insurance, management, maintenance or transaction costs. Zillow indices are modelled estimates, and coverage varies across ZIP codes and months.</p><p>The report keeps those limits visible, does not estimate missing values, and shows year-over-year coverage alongside growth measures so a reader can judge how much of the market supports the comparison.</p></div>
         </div>
       </section>
 
       <section className="estate-footer-cta section-shell">
-        <div><p className="section-index">Project repository</p><h2>See the implementation.</h2><p>Explore the Python transformations, layered SQL models, validation queries and source documentation on GitHub.</p></div>
+        <div><p className="section-index">Project repository</p><h2>See the implementation.</h2><p>Explore the Python pipeline, layered SQL models, Power BI project, data-quality checks, and source documentation on GitHub.</p></div>
         <a className="primary-button" href="https://github.com/yuvrajriyar/EstateFlow" target="_blank" rel="noreferrer">Open EstateFlow <ExternalArrow /></a>
       </section>
 

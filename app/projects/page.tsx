@@ -5,7 +5,7 @@ const projects = [
   {
     eyebrow: "Housing analytics · End-to-end pipeline",
     title: "EstateFlow",
-    description: "A solo data-engineering and analytics project that profiles and reshapes Zillow home-value and rent data, models it in PostgreSQL at the ZIP-month grain, and produces validated market-comparison metrics. The Power BI reporting layer is next.",
+    description: "A working housing-market analytics system: Zillow home-value and rent data moves through Python and PostgreSQL into a three-page Power BI report for national trends, state and metro comparisons, and careful ZIP-level screening.",
     stack: ["Python", "PostgreSQL", "SQL", "Docker", "Data quality"],
     href: "https://github.com/yuvrajriyar/EstateFlow",
     detailsHref: "/projects/estateflow",
@@ -21,7 +21,7 @@ const projects = [
     visual: <ProTechVisual />,
   },
   {
-    eyebrow: "Operations analytics · Soaring Eagle Inc.",
+  eyebrow: "Operations analytics · Soaring Roadlines Inc.",
     title: "Dispatch Command Centre",
     description: "A practical dispatch tool for tracking active loads across a 20-truck fleet, estimating empty dates, prioritising backloads, and making twice-daily planning easier.",
     stack: ["Python", "Streamlit", "SQLite", "Pandas"],

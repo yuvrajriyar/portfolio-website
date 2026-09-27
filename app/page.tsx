@@ -85,7 +85,7 @@ export default function Home() {
         <div className="featured-project-grid">
           <article className="featured-project-card estateflow-card">
             <EstateFlowVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">End-to-end data pipeline</p><h3>EstateFlow</h3><p>A housing-market pipeline transforming Zillow home-value and rent data into validated ZIP-month investment metrics.</p><Link href="/projects/estateflow">View case study <ArrowUpRight /></Link></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">End-to-end analytics · Power BI</p><h3>EstateFlow</h3><p>A housing-market system that carries Zillow data through Python and PostgreSQL into an interactive report for comparing national, state, metro and ZIP-level patterns.</p><Link href="/projects/estateflow">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
             <ProTechVisual />
@@ -93,7 +93,7 @@ export default function Home() {
           </article>
           <article className="featured-project-card">
             <DispatchVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">Soaring Eagle Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><Link href="/projects/dispatch-command-centre">View case study <ArrowUpRight /></Link></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">Soaring Roadlines Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><Link href="/projects/dispatch-command-centre">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
             <NBAVisual />
@@ -120,7 +120,7 @@ export default function Home() {
           <div className="experience-grid">
             <div className="timeline">
               <article>
-                <p className="timeline-date">Jun 2026 · Present</p><h3>Soaring Eagle Inc.</h3><p className="timeline-role">Operations &amp; Financial Analyst · Fresno, California</p>
+                <p className="timeline-date">Jun 2026 · Present</p><h3>Soaring Roadlines Inc.</h3><p className="timeline-role">Operations &amp; Financial Analyst · Fresno, California</p>
                 <div className="experience-story"><p>Working inside a family transportation business has made analytics very concrete. A late follow-up can leave a truck idle, an incomplete record can distort a margin, and a useful answer needs to fit the pace of the operation.</p><p>I built a dispatch application in Python and Streamlit that brings ETAs, empty dates, and backhaul priorities for roughly 20 trucks into one view. It cut the routine tracking process by about half and made the morning and afternoon reviews far more focused. Alongside it, I analyse revenue, gross profit, fuel, and transportation costs in Excel and keep the underlying freight records current through reconciliation and broker follow-ups.</p></div>
                 <div className="experience-evidence"><span><strong>≈50%</strong> less routine tracking time</span><span><strong>20</strong> trucks in one operating view</span><span><strong>2× daily</strong> review rhythm</span></div>
               </article>
