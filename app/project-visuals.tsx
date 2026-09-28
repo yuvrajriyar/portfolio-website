@@ -1,4 +1,5 @@
 import ProTechCarousel from "./protech-carousel";
+import Image from "next/image";
 
 export function ProTechVisual() {
   return <ProTechCarousel />;
@@ -83,15 +84,8 @@ export function PipelineVisual() {
 
 export function EstateFlowVisual() {
   return (
-    <div className="project-visual pipeline-visual" aria-label="EstateFlow pipeline from Zillow housing data through Python and PostgreSQL to validated market metrics">
-      <div className="visual-topline"><span>RAW DATA → DECISION METRICS</span><span>GRAIN · ZIP × MONTH</span></div>
-      <div className="pipeline-flow">
-        <div><span>01 · SOURCE</span><strong>Zillow</strong><small>Home value + rent</small></div><i />
-        <div><span>02 · TRANSFORM</span><strong>Python</strong><small>Profile, reshape, validate</small></div><i />
-        <div><span>03 · MODEL</span><strong>PostgreSQL</strong><small>Stage → intermediate → mart</small></div><i />
-        <div><span>04 · ANALYSE</span><strong>Market metrics</strong><small>Annualised rent / value</small></div>
-      </div>
-      <div className="metric-ribbon pipeline-metrics"><span>✓ REQUIRED VALUES</span><span>✓ POSITIVE VALUES</span><span>✓ UNIQUE GRAIN</span></div>
+    <div className="project-visual estate-preview" aria-label="EstateFlow Power BI National Housing Market dashboard preview">
+      <Image className="estate-preview-shot" src="/images/estateflow-national-market.png" alt="EstateFlow national housing market report with filters, key measures, trends, and ZIP-level market opportunities" fill sizes="(max-width: 900px) 100vw, 50vw" />
     </div>
   );
 }

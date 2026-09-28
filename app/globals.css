@@ -165,6 +165,27 @@ footer h2 { max-width:780px; font-size:clamp(40px,5vw,68px); }
   .footer-bottom span:last-child { text-align:left; }
 }
 
+/* EstateFlow Power BI screenshots */
+.estate-dashboard-section { padding-top:105px; padding-bottom:105px; }
+.estate-dashboard-intro { max-width:850px; margin:-28px 0 38px auto; color:var(--muted); font-size:15px; line-height:1.75; }
+.estate-dashboard-gallery { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
+.estate-dashboard-card { overflow:hidden; margin:0; border:1px solid var(--line); background:#10100f; }
+.estate-dashboard-card-featured { grid-column:1/-1; }
+.estate-dashboard-card>a { display:block; overflow:hidden; background:#080808; }
+.estate-dashboard-card img { display:block; width:100%; height:auto; transition:transform 220ms ease; }
+.estate-dashboard-card>a:hover img { transform:scale(1.012); }
+.estate-dashboard-card figcaption { padding:19px 22px 21px; border-top:1px solid var(--line); }
+.estate-dashboard-card figcaption span,.estate-dashboard-card figcaption strong { display:block; }
+.estate-dashboard-card figcaption span { margin-bottom:8px; color:var(--copper); font-family:monospace; font-size:9px; letter-spacing:.09em; }
+.estate-dashboard-card figcaption strong { font-family:Georgia,serif; font-size:22px; font-weight:400; }
+.estate-dashboard-card figcaption p { margin:7px 0 0; color:var(--muted); font-size:12px; line-height:1.6; }
+.estate-dashboard-caption { max-width:720px; margin:20px 0 0 auto; color:rgba(243,238,228,.46); font-size:11px; line-height:1.6; text-align:right; }
+.project-visual.estate-preview { padding:0; background:#080808; }
+.project-visual.estate-preview::after { display:none; }
+.estate-preview-shot { object-fit:cover; object-position:center top; }
+@media (max-width:900px) { .estate-dashboard-intro { margin-left:0; }.estate-dashboard-caption { margin-left:0; text-align:left; } }
+@media (max-width:560px) { .estate-dashboard-section { padding-top:80px; padding-bottom:80px; }.estate-dashboard-gallery { grid-template-columns:1fr; gap:16px; }.estate-dashboard-card-featured { grid-column:auto; }.estate-dashboard-card figcaption { padding:15px 16px 17px; } }
+
 /* Personal portfolio expansion */
 .classic-mark {
   position:relative;

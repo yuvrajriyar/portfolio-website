@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "EstateFlow Case Study | Yuvraj Riyar",
@@ -21,6 +22,12 @@ const milestones = [
   { status: "complete", title: "Market analytics", detail: "Historical and latest-ZIP marts with annualised rent, gross rent-to-value, and year-over-year movement." },
   { status: "complete", title: "Power BI report", detail: "National overview, state and metro explorer, and a plain-English reader's guide." },
   { status: "next", title: "Forecasting and CI", detail: "Back-test a statistical forecast with uncertainty intervals and add an automated CI test run." },
+];
+
+const dashboardImages = [
+  { src: "/images/estateflow-national-market.png", width: 2032, height: 1123, alt: "EstateFlow National Housing Market dashboard showing national medians, home-value and rent trends, and ZIP-level market opportunities", title: "National Housing Market", detail: "Headline measures, long-term movement, coverage, and ZIP-level screening in one view." },
+  { src: "/images/estateflow-market-explorer.png", width: 2032, height: 1115, alt: "EstateFlow Market Explorer dashboard comparing state-level growth and gross yield, rent momentum, and metro markets", title: "Market Explorer", detail: "Compare home-value growth, gross yield, and rent momentum by state and metro." },
+  { src: "/images/estateflow-dashboard-guide.png", width: 2032, height: 1129, alt: "EstateFlow dashboard guide explaining the reading order, metrics, and limitations", title: "How to Read the Dashboard", detail: "A plain-English guide to the measures, practical reading order, and limits of the comparison." },
 ];
 
 function ExternalArrow() {
@@ -51,6 +58,21 @@ function PipelineDiagram() {
         ))}
       </div>
       <div className="estate-visual-footer"><span>RAW</span><span>VALIDATED</span><span>ANALYSIS READY</span></div>
+    </div>
+  );
+}
+
+function DashboardGallery() {
+  return (
+    <div className="estate-dashboard-gallery">
+      {dashboardImages.map((item, index) => (
+        <figure className={`estate-dashboard-card${index === 0 ? " estate-dashboard-card-featured" : ""}`} key={item.src}>
+          <a href={item.src} target="_blank" rel="noreferrer" aria-label={`Open full-size dashboard: ${item.title}`}>
+            <Image src={item.src} alt={item.alt} width={item.width} height={item.height} sizes={index === 0 ? "(max-width: 900px) 100vw, 82vw" : "(max-width: 900px) 100vw, 41vw"} />
+          </a>
+          <figcaption><span>0{index + 1} / POWER BI</span><strong>{item.title}</strong><p>{item.detail}</p></figcaption>
+        </figure>
+      ))}
     </div>
   );
 }
@@ -98,8 +120,15 @@ export default function EstateFlowPage() {
         </div>
       </section>
 
+      <section className="section-shell estate-section estate-dashboard-section">
+        <div className="estate-section-heading"><p className="section-index">02 / Dashboard</p><h2>From the national picture to a closer market comparison.</h2></div>
+        <p className="estate-dashboard-intro">The report moves from a national overview to state and metro comparisons. A dedicated guide explains how to interpret the measures and where the comparisons need care.</p>
+        <DashboardGallery />
+        <p className="estate-dashboard-caption">Dashboard images show the July 2026 Zillow snapshot. The included Power BI project can be refreshed against the PostgreSQL marts for the latest available data.</p>
+      </section>
+
       <section id="architecture" className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">02 / Architecture</p><h2>Four layers, each with a clear responsibility.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">03 / Architecture</p><h2>Four layers, each with a clear responsibility.</h2></div>
         <div className="estate-architecture-grid">
           <article><span>01</span><h3>Source</h3><p>Zillow Home Value Index and Observed Rent Index files, accompanied by documented coverage and limitations.</p></article>
           <article><span>02</span><h3>Transform</h3><p>Python and pandas profile the sources, preserve ZIP codes, reshape dates and enforce row-level assertions.</p></article>
@@ -111,7 +140,7 @@ export default function EstateFlowPage() {
       <section className="estate-data-section">
         <div className="section-shell estate-data-grid">
           <div className="estate-source-profile">
-            <div className="estate-section-heading compact"><p className="section-index">03 / Source profile</p><h2>Similar shape. Very different coverage.</h2></div>
+            <div className="estate-section-heading compact"><p className="section-index">04 / Source profile</p><h2>Similar shape. Very different coverage.</h2></div>
             <div className="coverage-chart" aria-label="Source profile comparing the number of ZIP codes in ZHVI and ZORI">
               <div className="coverage-row"><div><strong>ZHVI</strong><span>Home values</span></div><i><b style={{ width: "100%" }} /></i><em>26,269 ZIPs</em></div>
               <div className="coverage-row"><div><strong>ZORI</strong><span>Monthly rent</span></div><i><b style={{ width: "32.5%" }} /></i><em>8,543 ZIPs</em></div>
@@ -126,7 +155,7 @@ export default function EstateFlowPage() {
       </section>
 
       <section className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">04 / Analytical model</p><h2>The first mart answers a focused set of questions.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">05 / Analytical model</p><h2>The first mart answers a focused set of questions.</h2></div>
         <div className="estate-metric-layout">
           <div className="estate-metric-cards">
             <article><span>Source measure</span><strong>ZHVI</strong><p>Typical home value in US dollars.</p></article>
@@ -145,7 +174,7 @@ export default function EstateFlowPage() {
 
       <section className="estate-quality-section">
         <div className="section-shell">
-          <div className="estate-section-heading"><p className="section-index">05 / Data quality</p><h2>Checks are part of the pipeline, not an afterthought.</h2></div>
+          <div className="estate-section-heading"><p className="section-index">06 / Data quality</p><h2>Checks are part of the pipeline, not an afterthought.</h2></div>
           <div className="estate-quality-grid">
             {qualityChecks.map((check) => <article key={check.number}><span>{check.number}</span><div><h3>{check.title}</h3><p>{check.detail}</p></div></article>)}
           </div>
@@ -153,7 +182,7 @@ export default function EstateFlowPage() {
       </section>
 
       <section className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">06 / Progress</p><h2>The pipeline and first report are working. Next comes validation over time.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">07 / Progress</p><h2>The pipeline and first report are working. Next comes validation over time.</h2></div>
         <div className="estate-progress-layout">
           <div className="estate-milestones">
             {milestones.map((milestone) => (
@@ -174,7 +203,7 @@ export default function EstateFlowPage() {
 
       <section className="estate-limitations">
         <div className="section-shell estate-limitations-grid">
-          <div><p className="section-index">07 / Judgement</p><h2>What the metric does not claim.</h2></div>
+          <div><p className="section-index">08 / Judgement</p><h2>What the metric does not claim.</h2></div>
           <div><p>Gross rent-to-value is useful for a first-pass comparison, but it is not net yield or cash flow. It does not account for financing, vacancy, taxes, insurance, management, maintenance or transaction costs. Zillow indices are modelled estimates, and coverage varies across ZIP codes and months.</p><p>The report keeps those limits visible, does not estimate missing values, and shows year-over-year coverage alongside growth measures so a reader can judge how much of the market supports the comparison.</p></div>
         </div>
       </section>
