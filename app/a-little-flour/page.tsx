@@ -16,7 +16,7 @@ export default function AQuiteReasonableDetour() {
         <h1>You clicked the pizza.</h1>
         <p>A person of priorities, clearly.</p>
         <p>If you fancy following my pizzaiolo journey, there is a little more to it than that photograph. Two years with a Roccbox, a Dome XL, plenty of flour, and a few lessons learnt the warm way.</p>
-        <a className={styles.journal} href="https://yr-00xl.yuvi200430.chatgpt.site" rel="nofollow">Step inside YR / 00X(L) <span aria-hidden="true">↗</span></a>
+        <a className={styles.journal} href="https://yr-00xl.vercel.app/" rel="nofollow">Step inside YR / 00X(L) <span aria-hidden="true">↗</span></a>
         <Link className={styles.back} href="/#about">Back to the respectable bit</Link>
       </div>
     </main>
