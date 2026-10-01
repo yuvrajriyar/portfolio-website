@@ -22,13 +22,16 @@ const milestones = [
   { status: "complete", title: "Market analytics", detail: "Historical and latest-ZIP measures for annualised rent, gross rent-to-value, and year-over-year movement." },
   { status: "complete", title: "Five-page Power BI report", detail: "National overview, Market Explorer, ZIP Detail, Forecast Experiment, and Guide & Definitions." },
   { status: "complete", title: "Forecast experiment and CI", detail: "31,566 August-vintage forecast rows published with chronological evaluation and empirical intervals; PostgreSQL integration tests pass in CI." },
-  { status: "next", title: "Local Desktop acceptance", detail: "Refresh from PostgreSQL and verify report navigation, reset controls, and filter behaviour in Power BI Desktop." },
+  { status: "complete", title: "Local Desktop acceptance", detail: "All five pages refreshed and visually reviewed on 1 October 2026; navigation, Clear filters, and launcher-based startup reset confirmed by the author." },
+  { status: "next", title: "Interactive online publication", detail: "The case study and screenshots are public. A browser-accessible interactive report remains to be published and access-tested." },
 ];
 
 const dashboardImages = [
-  { src: "/images/estateflow-national-market.png", width: 2032, height: 1123, alt: "EstateFlow National Housing Market dashboard showing national medians, home-value and rent trends, and ZIP-level market opportunities", title: "National Housing Market", detail: "Headline measures, long-term movement, coverage, and ZIP-level screening in one view." },
-  { src: "/images/estateflow-market-explorer.png", width: 2032, height: 1115, alt: "EstateFlow Market Explorer dashboard comparing state-level growth and gross yield, rent momentum, and metro markets", title: "Market Explorer", detail: "Compare home-value growth, gross yield, and rent momentum by state and metro." },
-  { src: "/images/estateflow-dashboard-guide.png", width: 2032, height: 1129, alt: "EstateFlow dashboard guide explaining the reading order, metrics, and limitations", title: "How to Read the Dashboard", detail: "A plain-English guide to the measures, practical reading order, and limits of the comparison." },
+  { src: "/images/estateflow-national-market.png", width: 2048, height: 1113, alt: "EstateFlow National Housing Market dashboard showing national medians, home-value and rent trends, and ZIP-level market opportunities", title: "National Housing Market", detail: "Headline measures, long-term movement, coverage, and ZIP-level screening in one view." },
+  { src: "/images/estateflow-market-explorer.png", width: 2048, height: 1128, alt: "EstateFlow Market Explorer dashboard comparing state-level growth and gross yield, rent momentum, and metro markets", title: "Market Explorer", detail: "Compare home-value growth, gross yield, and rent momentum by state and metro." },
+  { src: "/images/estateflow-zip-detail.png", width: 2048, height: 1128, alt: "EstateFlow August 2026 profile for San Francisco ZIP 94112 with history and geographic benchmarks", title: "ZIP Detail", detail: "Compare a selected ZIP with its metro, state and national benchmarks." },
+  { src: "/images/estateflow-forecast-experiment.png", width: 2048, height: 1131, alt: "Experimental forecasts for Amherst ZIP 01002 with 3-, 6- and 12-month projections and empirical bounds", title: "Forecast Experiment", detail: "Separate experimental index projections from observed data and inspect their empirical ranges." },
+  { src: "/images/estateflow-dashboard-guide.png", width: 2048, height: 1128, alt: "EstateFlow dashboard guide explaining the reading order, metrics, and limitations", title: "How to Read the Dashboard", detail: "A plain-English guide to the measures, practical reading order, and limits of the comparison." },
 ];
 
 function ExternalArrow() {
@@ -91,7 +94,7 @@ export default function EstateFlowPage() {
         <div className="estate-breadcrumb"><Link href="/projects">Portfolio</Link><span>/</span><strong>EstateFlow</strong></div>
         <div className="estate-hero-grid">
           <div>
-            <div className="estate-status"><span /> Release candidate · local Desktop review pending</div>
+            <div className="estate-status"><span /> Desktop verified · August 2026 data</div>
             <p className="section-index">Independent analytics and data engineering</p>
             <h1>EstateFlow</h1>
             <p className="estate-deck">A reproducible analytics system that transforms Zillow home-value and rent data through Python and PostgreSQL into a five-page Power BI report for comparing housing markets across the United States.</p>
@@ -125,7 +128,7 @@ export default function EstateFlowPage() {
         <div className="estate-section-heading"><p className="section-index">02 / Dashboard</p><h2>From the national picture to a closer market comparison.</h2></div>
         <p className="estate-dashboard-intro">The five-page report moves from national and state-level comparisons to a ZIP-level detail view and a separately labelled forecast experiment. A dedicated guide explains the measures and their limits.</p>
         <DashboardGallery />
-        <p className="estate-dashboard-caption">Dashboard images show the July 2026 Zillow snapshot. The repository and verified PostgreSQL pipeline now use August 2026 data; updated Desktop screenshots are pending.</p>
+        <p className="estate-dashboard-caption">Screenshots show the August 2026 Zillow snapshot, refreshed and reviewed in Power BI Desktop on 1 October 2026. These are static previews, not an embedded interactive report.</p>
       </section>
 
       <section id="architecture" className="section-shell estate-section">
@@ -183,7 +186,7 @@ export default function EstateFlowPage() {
       </section>
 
       <section className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">07 / Progress</p><h2>The pipeline, forecast experiment, and report are built. Final local acceptance remains.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">07 / Progress</p><h2>The pipeline and five-page report are verified locally.</h2></div>
         <div className="estate-progress-layout">
           <div className="estate-milestones">
             {milestones.map((milestone) => (
@@ -195,9 +198,9 @@ export default function EstateFlowPage() {
           </div>
           <aside className="estate-next-card">
             <p className="section-index">Final release check</p>
-            <h3>Refresh and verify locally</h3>
-            <p>The August database rebuild and forecast publication passed locally. The remaining acceptance check refreshes the report in Power BI Desktop and verifies its interactions.</p>
-            <div><span>01</span>August pipeline and forecasts verified</div><div><span>02</span>Refresh all five report pages in Desktop</div><div><span>03</span>Verify navigation, reset controls, and slicers</div>
+            <h3>Make it accessible online</h3>
+            <p>The August pipeline, forecasts, and Desktop report passed local acceptance. Public screenshots and source code are available; an interactive online report is the remaining publication step.</p>
+            <div><span>01</span>August pipeline and forecasts verified</div><div><span>02</span>Five refreshed pages visually reviewed</div><div><span>03</span>Navigation and filter resets confirmed</div>
           </aside>
         </div>
       </section>
