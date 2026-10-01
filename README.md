@@ -6,7 +6,7 @@ A personal portfolio for my work across data, business, financial, operational, 
 
 ## Featured work
 
-- **EstateFlow:** an end-to-end housing-market pipeline with an editable Power BI report covering a national overview, a state and metro explorer, and a reader's guide.
+- **EstateFlow:** an end-to-end housing-market pipeline with a five-page Power BI report covering national and regional comparisons, ZIP detail, an exploratory forecast, and a reader's guide.
 - **ProTech:** an athlete-performance platform built with Aggie Sports Analytics for UC Davis Football, including team and case-competition imagery.
 - **Dispatch Command Centre:** an internal Python application supporting load visibility and daily fleet planning at Soaring Roadlines Inc.
 - **NBA Injury Risk Analysis** and **King County Housing Market Analysis:** statistical modelling case studies.

@@ -5,8 +5,8 @@ const projects = [
   {
     eyebrow: "Housing analytics · End-to-end pipeline",
     title: "EstateFlow",
-    description: "A working housing-market analytics system: Zillow home-value and rent data moves through Python and PostgreSQL into a three-page Power BI report for national trends, state and metro comparisons, and careful ZIP-level screening.",
-    stack: ["Python", "PostgreSQL", "SQL", "Docker", "Data quality"],
+    description: "A reproducible housing-market analytics pipeline: Zillow data moves through Python and PostgreSQL into a five-page Power BI report with ZIP detail and a separately labelled forecast experiment.",
+    stack: ["Python", "PostgreSQL", "SQL", "Docker", "Power BI", "Data quality"],
     href: "https://github.com/yuvrajriyar/EstateFlow",
     detailsHref: "/projects/estateflow",
     visual: <EstateFlowVisual />,
