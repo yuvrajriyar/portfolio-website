@@ -18,10 +18,10 @@ const qualityChecks = [
 
 const milestones = [
   { status: "complete", title: "Environment and database", detail: "Python 3.12, uv, Docker Compose and PostgreSQL 17." },
-  { status: "complete", title: "Repeatable data pipeline", detail: "Automated source loading, PostgreSQL staging and marts, reconciliation, and fail-fast SQL quality gates." },
+  { status: "complete", title: "Repeatable data pipeline", detail: "Latest August sources loaded and reconciled; all PostgreSQL quality gates passed on 1 October 2026." },
   { status: "complete", title: "Market analytics", detail: "Historical and latest-ZIP measures for annualised rent, gross rent-to-value, and year-over-year movement." },
   { status: "complete", title: "Five-page Power BI report", detail: "National overview, Market Explorer, ZIP Detail, Forecast Experiment, and Guide & Definitions." },
-  { status: "complete", title: "Forecast experiment and CI", detail: "Chronological model evaluation with empirical prediction intervals, plus automated PostgreSQL quality-gate tests." },
+  { status: "complete", title: "Forecast experiment and CI", detail: "31,566 August-vintage forecast rows published with chronological evaluation and empirical intervals; PostgreSQL integration tests pass in CI." },
   { status: "next", title: "Local Desktop acceptance", detail: "Refresh from PostgreSQL and verify report navigation, reset controls, and filter behaviour in Power BI Desktop." },
 ];
 
@@ -125,7 +125,7 @@ export default function EstateFlowPage() {
         <div className="estate-section-heading"><p className="section-index">02 / Dashboard</p><h2>From the national picture to a closer market comparison.</h2></div>
         <p className="estate-dashboard-intro">The five-page report moves from national and state-level comparisons to a ZIP-level detail view and a separately labelled forecast experiment. A dedicated guide explains the measures and their limits.</p>
         <DashboardGallery />
-        <p className="estate-dashboard-caption">Dashboard images show the July 2026 Zillow snapshot. The included Power BI project can be refreshed against the PostgreSQL marts for the latest available data.</p>
+        <p className="estate-dashboard-caption">Dashboard images show the July 2026 Zillow snapshot. The repository and verified PostgreSQL pipeline now use August 2026 data; updated Desktop screenshots are pending.</p>
       </section>
 
       <section id="architecture" className="section-shell estate-section">
@@ -143,10 +143,10 @@ export default function EstateFlowPage() {
           <div className="estate-source-profile">
             <div className="estate-section-heading compact"><p className="section-index">04 / Source profile</p><h2>Similar shape. Very different coverage.</h2></div>
             <div className="coverage-chart" aria-label="Source profile comparing the number of ZIP codes in ZHVI and ZORI">
-              <div className="coverage-row"><div><strong>ZHVI</strong><span>Home values</span></div><i><b style={{ width: "100%" }} /></i><em>26,269 ZIPs</em></div>
-              <div className="coverage-row"><div><strong>ZORI</strong><span>Monthly rent</span></div><i><b style={{ width: "32.5%" }} /></i><em>8,543 ZIPs</em></div>
+              <div className="coverage-row"><div><strong>ZHVI</strong><span>Home values</span></div><i><b style={{ width: "100%" }} /></i><em>26,268 ZIPs</em></div>
+              <div className="coverage-row"><div><strong>ZORI</strong><span>Monthly rent</span></div><i><b style={{ width: "32.2%" }} /></i><em>8,459 ZIPs</em></div>
             </div>
-            <p className="coverage-note">Source profiling snapshot through July 2026. Analysis is limited to ZIP-month combinations available in both datasets.</p>
+            <p className="coverage-note">Verified source snapshot through August 2026. The joined mart contains 462,410 ZIP-month records across 8,424 ZIP codes; its latest matched snapshot contains 8,421 ZIPs.</p>
           </div>
           <div className="estate-source-cards">
             <article><span>ZHVI</span><h3>Typical home value</h3><p>A modelled estimate for the middle portion of the housing market. It is not an individual appraisal or a future forecast.</p><small>Monthly · January 2000 onward</small></article>
@@ -196,8 +196,8 @@ export default function EstateFlowPage() {
           <aside className="estate-next-card">
             <p className="section-index">Final release check</p>
             <h3>Refresh and verify locally</h3>
-            <p>The report and pipeline are source-controlled. The remaining acceptance check uses the local PostgreSQL database and Power BI Desktop.</p>
-            <div><span>01</span>Rebuild the database and pass its quality gates</div><div><span>02</span>Refresh all five report pages in Desktop</div><div><span>03</span>Verify navigation, reset controls, and slicers</div>
+            <p>The August database rebuild and forecast publication passed locally. The remaining acceptance check refreshes the report in Power BI Desktop and verifies its interactions.</p>
+            <div><span>01</span>August pipeline and forecasts verified</div><div><span>02</span>Refresh all five report pages in Desktop</div><div><span>03</span>Verify navigation, reset controls, and slicers</div>
           </aside>
         </div>
       </section>
