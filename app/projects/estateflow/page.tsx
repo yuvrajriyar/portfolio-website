@@ -13,15 +13,16 @@ const qualityChecks = [
   { number: "03", title: "Unique grain", detail: "Confirms every record represents one ZIP code in one month." },
   { number: "04", title: "Layer reconciliation", detail: "Compares row counts as data moves from transformation to the analytical mart." },
   { number: "05", title: "Metric verification", detail: "Independently recalculates annualised rent and gross rent-to-value percentage." },
+  { number: "06", title: "Fail-fast pipeline", detail: "Raises a SQL exception when required checks fail, stopping invalid data before downstream reporting." },
 ];
 
 const milestones = [
   { status: "complete", title: "Environment and database", detail: "Python 3.12, uv, Docker Compose and PostgreSQL 17." },
-  { status: "complete", title: "Source research", detail: "ZHVI and ZORI coverage, grain, limitations and missingness documented." },
-  { status: "complete", title: "Repeatable data pipeline", detail: "Automated ZHVI and ZORI loading, transformations, marts and SQL quality checks through one runner." },
-  { status: "complete", title: "Market analytics", detail: "Historical and latest-ZIP marts with annualised rent, gross rent-to-value, and year-over-year movement." },
-  { status: "complete", title: "Power BI report", detail: "National overview, state and metro explorer, and a plain-English reader's guide." },
-  { status: "next", title: "Forecasting and CI", detail: "Back-test a statistical forecast with uncertainty intervals and add an automated CI test run." },
+  { status: "complete", title: "Repeatable data pipeline", detail: "Automated source loading, PostgreSQL staging and marts, reconciliation, and fail-fast SQL quality gates." },
+  { status: "complete", title: "Market analytics", detail: "Historical and latest-ZIP measures for annualised rent, gross rent-to-value, and year-over-year movement." },
+  { status: "complete", title: "Five-page Power BI report", detail: "National overview, Market Explorer, ZIP Detail, Forecast Experiment, and Guide & Definitions." },
+  { status: "complete", title: "Forecast experiment and CI", detail: "Chronological model evaluation with empirical prediction intervals, plus automated PostgreSQL quality-gate tests." },
+  { status: "next", title: "Local Desktop acceptance", detail: "Refresh from PostgreSQL and verify report navigation, reset controls, and filter behaviour in Power BI Desktop." },
 ];
 
 const dashboardImages = [
@@ -90,10 +91,10 @@ export default function EstateFlowPage() {
         <div className="estate-breadcrumb"><Link href="/projects">Portfolio</Link><span>/</span><strong>EstateFlow</strong></div>
         <div className="estate-hero-grid">
           <div>
-            <div className="estate-status"><span /> Active project · dashboard available</div>
+            <div className="estate-status"><span /> Release candidate · local Desktop review pending</div>
             <p className="section-index">Independent analytics and data engineering</p>
             <h1>EstateFlow</h1>
-            <p className="estate-deck">A working analytics system that takes Zillow home-value and rent data through Python and PostgreSQL into a Power BI report for comparing housing markets across the United States.</p>
+            <p className="estate-deck">A reproducible analytics system that transforms Zillow home-value and rent data through Python and PostgreSQL into a five-page Power BI report for comparing housing markets across the United States.</p>
             <div className="estate-actions">
               <a className="primary-button" href="https://github.com/yuvrajriyar/EstateFlow" target="_blank" rel="noreferrer">View repository <ExternalArrow /></a>
               <a className="secondary-button" href="#architecture">Explore the pipeline</a>
@@ -122,7 +123,7 @@ export default function EstateFlowPage() {
 
       <section className="section-shell estate-section estate-dashboard-section">
         <div className="estate-section-heading"><p className="section-index">02 / Dashboard</p><h2>From the national picture to a closer market comparison.</h2></div>
-        <p className="estate-dashboard-intro">The report moves from a national overview to state and metro comparisons. A dedicated guide explains how to interpret the measures and where the comparisons need care.</p>
+        <p className="estate-dashboard-intro">The five-page report moves from national and state-level comparisons to a ZIP-level detail view and a separately labelled forecast experiment. A dedicated guide explains the measures and their limits.</p>
         <DashboardGallery />
         <p className="estate-dashboard-caption">Dashboard images show the July 2026 Zillow snapshot. The included Power BI project can be refreshed against the PostgreSQL marts for the latest available data.</p>
       </section>
@@ -182,7 +183,7 @@ export default function EstateFlowPage() {
       </section>
 
       <section className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">07 / Progress</p><h2>The pipeline and first report are working. Next comes validation over time.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">07 / Progress</p><h2>The pipeline, forecast experiment, and report are built. Final local acceptance remains.</h2></div>
         <div className="estate-progress-layout">
           <div className="estate-milestones">
             {milestones.map((milestone) => (
@@ -193,10 +194,10 @@ export default function EstateFlowPage() {
             ))}
           </div>
           <aside className="estate-next-card">
-            <p className="section-index">Next release</p>
-            <h3>Statistical forecasting</h3>
-            <p>The next analytical step is to compare forecast approaches for home values and rents, test them against held-out history, and communicate forecast uncertainty clearly.</p>
-            <div><span>01</span>Define a defensible target and horizon</div><div><span>02</span>Back-test against time-based holdouts</div><div><span>03</span>Show prediction intervals and limitations</div>
+            <p className="section-index">Final release check</p>
+            <h3>Refresh and verify locally</h3>
+            <p>The report and pipeline are source-controlled. The remaining acceptance check uses the local PostgreSQL database and Power BI Desktop.</p>
+            <div><span>01</span>Rebuild the database and pass its quality gates</div><div><span>02</span>Refresh all five report pages in Desktop</div><div><span>03</span>Verify navigation, reset controls, and slicers</div>
           </aside>
         </div>
       </section>
