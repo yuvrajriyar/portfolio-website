@@ -17,7 +17,7 @@ export default function ProTechCarousel() {
       <div className="carousel-stage" aria-live="polite">
         {active === 0 && (
           <div className="protech-slide protech-dashboard-slide">
-            <div className="visual-topline"><span>ATHLETE 24 · WR</span><span>YEAR-OVER-YEAR PROFILE</span></div>
+            <div className="visual-topline"><span>ATHLETE 24 · WR</span><span>ILLUSTRATIVE PROFILE</span></div>
             <div className="protech-dashboard-grid">
               <svg viewBox="0 0 320 190" role="img" aria-label="Athlete performance radar chart comparing speed, power, force, strength, and jumping metrics">
                 <polygon points="160,24 232,76 205,161 115,161 88,76" className="radar-grid" />

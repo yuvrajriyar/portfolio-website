@@ -29,7 +29,7 @@ export default function DispatchPage() {
       <section id="project-story" className="estate-overview">
         <div className="section-shell estate-overview-grid">
           <div><p className="section-index">01 / Problem</p><h2>Dispatch information was available, but not easy to act on.</h2></div>
-          <div className="estate-narrative"><p>Tracking active freight across a roughly 20-truck fleet required repeated manual checks across drivers, routes, delivery dates, empty dates, and broker follow-ups. That made it easier to miss when a truck needed its next load or which backhaul search deserved attention first.</p><p>The Dispatch Command Centre centralises those updates into one working view so the morning and afternoon reviews focus on exceptions and priorities rather than reconstructing the fleet&apos;s status.</p></div>
+          <div className="estate-narrative"><p>Tracking active freight across a roughly 20-truck fleet required repeated manual checks across drivers, routes, delivery dates, empty dates, and broker follow-ups. That made it easier to miss when a truck needed its next load or which backhaul search deserved attention first.</p><p>I identified the tracking bottleneck and translated dispatcher requirements into ETA visibility, empty-date tracking and backhaul-priority flags. Using Python, Streamlit, SQLite and pandas, the Dispatch Command Centre centralises those updates into one working view so the morning and afternoon reviews focus on exceptions and priorities rather than reconstructing the fleet&apos;s status.</p></div>
           <aside className="estate-principle"><span>Operational principle</span><p>The best internal tool removes friction from a decision the team already makes every day.</p></aside>
         </div>
       </section>
@@ -64,9 +64,14 @@ export default function DispatchPage() {
         </div>
       </section>
 
+      <section className="section-shell estate-section">
+        <div className="estate-section-heading"><p className="section-index">05 / Financial context</p><h2>Operational priorities need a financial view.</h2></div>
+        <div className="estate-narrative"><p>Alongside dispatch planning, I analyse revenue, gross profit, fuel and transportation expenses in Excel to support load, truck and route profitability reviews. Reconciliation and discrepancy investigation keep those reports grounded in current freight records.</p><p>The work includes broker follow-ups and communicating findings across the operation. Building the tool was one part of the job; keeping its inputs useful and connecting them to daily decisions is the ongoing responsibility.</p></div>
+      </section>
+
       <section className="estate-limitations">
         <div className="section-shell estate-limitations-grid">
-          <div><p className="section-index">05 / Boundaries</p><h2>Built for the operation, not for public release.</h2></div>
+          <div><p className="section-index">06 / Boundaries</p><h2>Built for the operation, not for public release.</h2></div>
           <div><p>The application contains business and freight information, so the source code and live data remain private. This case study documents the system design and measured workflow improvement without exposing customer, broker, driver, lane, or transaction details.</p><p>The next useful expansion would connect profitability reporting more directly to the dispatch workflow while preserving a clear separation between operational and financial records.</p></div>
         </div>
       </section>

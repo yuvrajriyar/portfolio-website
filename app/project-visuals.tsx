@@ -39,9 +39,7 @@ export function NBAVisual() {
         </div>
         <div className="model-comparison">
           <p>Model comparison</p>
-          <div><span>Logistic</span><i><b style={{ width: "72%" }} /></i></div>
-          <div><span>Random Forest</span><i><b style={{ width: "86%" }} /></i></div>
-          <div><span>XGBoost</span><i><b style={{ width: "95.6%" }} /></i></div>
+          <div className="model-method-list"><span>Logistic regression · statistical baseline</span><span>Random forest · non-linear ensemble</span><span>XGBoost · gradient boosting</span></div>
         </div>
       </div>
       <div className="metric-ribbon"><span>WORKLOAD</span><span>INJURY HISTORY</span><span>PLAYER PROFILE</span></div>
@@ -58,9 +56,7 @@ export function HousingRegressionVisual() {
         <div className="housing-kpi housing-kpi-accent"><span>EXPLAINED VARIANCE</span><strong>55.7%</strong><small>structural model</small></div>
         <div className="housing-drivers">
           <p>Leading price drivers</p>
-          <div><span>Construction grade</span><i><b style={{ width: "92%" }} /></i></div>
-          <div><span>Living space</span><i><b style={{ width: "84%" }} /></i></div>
-          <div><span>Location &amp; quality</span><i><b style={{ width: "69%" }} /></i></div>
+          <div className="model-method-list"><span>Construction grade</span><span>Living space</span><span>Geographic &amp; quality characteristics</span></div>
         </div>
       </div>
       <div className="metric-ribbon"><span>INTERACTIONS</span><span>ANOVA / F-TESTS</span><span>DIAGNOSTICS</span></div>

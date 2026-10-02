@@ -20,13 +20,15 @@ const skills = [
   { mark: "Mg", name: "MongoDB", detail: "NoSQL data" },
   { mark: "M", name: "MATLAB", detail: "Numerical computing" },
   { mark: "PP", name: "PowerPoint", detail: "Presentation design" },
+  { mark: "Dx", name: "DAX & Power Query", detail: "BI models & transformation" },
+  { mark: "Dk", name: "Docker", detail: "Reproducible environments" },
 ];
 
 const skillGroups = [
   { label: "Working with data", items: "SQL, Python, and R are the core of my analytical work, supported by PostgreSQL, SQLite, and Excel when the problem calls for structured data, operational detail, or financial context." },
   { label: "Finding the answer", items: "I use regression, forecasting, time series, statistical testing, machine learning, and visual analysis to move from a broad question to a conclusion that can be explained and challenged." },
-  { label: "Building the system", items: "My recent work has moved further into ETL and ELT workflows, pipelines, transformation, modelling, validation, reconciliation, and the quality controls that keep analysis trustworthy." },
-  { label: "Making it usable", items: "Power BI, Tableau, Alteryx, Streamlit, React, and Supabase help me turn the underlying work into dashboards, applications, and reporting that people can actually use." },
+  { label: "Building the system", items: "EstateFlow puts these skills into practice: Python ingestion, layered PostgreSQL models, reusable analytical marts, reconciliation and fail-fast quality checks, supported by integration tests in CI." },
+  { label: "Making it usable", items: "I build dashboards and applications with Power BI, DAX, Power Query, Streamlit, React and Supabase. Requirements gathering, KPI definitions and clear communication help turn the underlying analysis into something useful to its audience." },
   { label: "AI in the workflow", items: "I use Claude, ChatGPT, Codex, and Cursor to accelerate research, coding, documentation, and repetitive work, then validate the logic and final output myself." },
 ];
 
@@ -55,7 +57,7 @@ export default function Home() {
           <p className="kicker">Introduction</p>
           <h1>I&apos;m Yuvraj Riyar.</h1>
           <p className="hero-reflection">Long before I studied statistics, I was already the person comparing every option, questioning assumptions, and researching a decision until it made sense.</p>
-          <p className="hero-summary">I&apos;m a recent UC Davis graduate with a B.S. in Statistics (Applied) and a minor in Managerial Economics. My background combines analytics, statistics, and business through work in sports technology, transportation operations, financial analysis, and end-to-end data systems.</p>
+          <p className="hero-summary">I&apos;m a recent UC Davis graduate with a B.S. in Statistics (Applied) and a minor in Managerial Economics. I combine analytics, technology and business problem-solving: understanding what people need, analysing financial and operational data, and building pipelines, dashboards and automated tools that fit the way they work.</p>
           <div className="hero-details" aria-label="Professional background">
             <div><span>Education</span><strong>UC Davis · Statistics (Applied)</strong></div>
             <div><span>Focus</span><strong>Data, business &amp; operations</strong></div>
@@ -85,7 +87,7 @@ export default function Home() {
         <div className="featured-project-grid">
           <article className="featured-project-card estateflow-card">
             <EstateFlowVisual />
-            <div className="featured-project-copy"><p className="project-eyebrow">End-to-end analytics · Power BI</p><h3>EstateFlow</h3><p>A housing-market system that carries Zillow data through Python and PostgreSQL into an interactive report for comparing national, state, metro and ZIP-level patterns.</p><Link href="/projects/estateflow">View case study <ArrowUpRight /></Link></div>
+            <div className="featured-project-copy"><p className="project-eyebrow">Featured · Housing analytics</p><h3>EstateFlow</h3><p>A shipped housing-market platform with 462,000+ matched records, five-view web and Power BI dashboards, a validated data pipeline and a separate forecast experiment.</p><Link href="/projects/estateflow">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
             <ProTechVisual />
@@ -121,12 +123,12 @@ export default function Home() {
             <div className="timeline">
               <article>
                 <p className="timeline-date">Jun 2026 · Present</p><h3>Soaring Roadlines Inc.</h3><p className="timeline-role">Operations &amp; Financial Analyst · Fresno, California</p>
-                <div className="experience-story"><p>Working inside a family transportation business has made analytics very concrete. A late follow-up can leave a truck idle, an incomplete record can distort a margin, and a useful answer needs to fit the pace of the operation.</p><p>I built a dispatch application in Python and Streamlit that brings ETAs, empty dates, and backhaul priorities for roughly 20 trucks into one view. It cut the routine tracking process by about half and made the morning and afternoon reviews far more focused. Alongside it, I analyse revenue, gross profit, fuel, and transportation costs in Excel and keep the underlying freight records current through reconciliation and broker follow-ups.</p></div>
+                <div className="experience-story"><p>Working inside a family transportation business has made analytics very concrete. A late follow-up can leave a truck idle, an incomplete record can distort a margin, and a useful answer needs to fit the pace of the operation.</p><p>I built a dispatch application in Python and Streamlit that brings ETAs, empty dates, and backhaul priorities for roughly 20 trucks into one view. It cut the routine tracking process by about half and made the morning and afternoon reviews far more focused. I translated dispatcher requirements into ETA tracking, availability and priority flags, using SQLite and pandas behind the interface. Alongside it, I analyse revenue, gross profit, fuel, and transportation costs in Excel and keep the underlying freight records current through reconciliation and broker follow-ups.</p></div>
                 <div className="experience-evidence"><span><strong>≈50%</strong> less routine tracking time</span><span><strong>20</strong> trucks in one operating view</span><span><strong>2× daily</strong> review rhythm</span></div>
               </article>
               <article>
                 <p className="timeline-date">Sep 2025 · Jun 2026</p><h3>Aggie Sports Analytics</h3><p className="timeline-role">Data Analyst · Davis, California</p>
-                <div className="experience-story"><p>ProTech was my first chance to help take an analytical product from an open-ended stakeholder problem to something used inside a real programme. I led a six-person team working with UC Davis Football and helped shape the priorities, development rhythm, and final delivery.</p><p>My contribution crossed product and technical work: React visualisations, Supabase uploads, multi-year record validation, athlete profiles, and player- and position-level views. Presenting the platform to coaches reinforced an important lesson for me: the work is only complete when the person making the decision can understand and use it.</p></div>
+                <div className="experience-story"><p>ProTech was my first chance to help take an analytical product from an open-ended stakeholder problem to something used inside a real programme. I led a six-person team working with UC Davis Football and helped shape the priorities, development rhythm, and final delivery.</p><p>My contribution crossed product and technical work: React visualisations, Python and bulk-upload workflows, PostgreSQL/Supabase integration, multi-year record validation, athlete profiles, and player- and position-level views. The source records included roster, strength, ForcePlate and NordBord data. Presenting the platform to coaches reinforced an important lesson for me: the work is only complete when the person making the decision can understand and use it.</p></div>
                 <div className="experience-evidence"><span><strong>6</strong> cross-functional contributors</span><span><strong>Multi-year</strong> athlete records</span><span><strong>Delivered</strong> to football staff</span></div>
               </article>
               <article>
@@ -136,7 +138,7 @@ export default function Home() {
             </div>
             <div className="experience-aside">
               <div className="personal-note-card"><p className="capability-label">How I work</p><p>I get close to how a business or system actually operates before deciding what to build. The numbers matter, but so do the people using them, the judgement behind the decision, and whether the answer holds up in practice.</p></div>
-              <div className="personal-note-card"><p className="capability-label">Current direction</p><p>I am building further depth in ETL workflows, data pipelines, transformation, validation, and end-to-end analytics systems while continuing to apply statistics and business judgement to practical decisions.</p></div>
+              <div className="personal-note-card"><p className="capability-label">Current direction</p><p>EstateFlow now brings together my statistical training and practical interest in business systems: a tested data pipeline, Power BI report, public web dashboard and documented forecast experiment. I want to keep building work that combines careful analysis with a clear reason for someone to use it.</p></div>
             </div>
           </div>
         </div>

@@ -521,9 +521,9 @@ footer h2 { max-width:780px; font-size:clamp(40px,5vw,68px); }
 .estate-formula-card>p { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:52px 0 22px; }.estate-formula-card>p strong { padding:12px 14px; border:1px solid var(--line); font-size:12px; font-weight:400; }.estate-formula-card>p b,.estate-formula-card>p i { color:var(--copper); font-family:Georgia,serif; font-size:18px; font-style:normal; font-weight:400; }
 .estate-formula-card h3 { margin:0 0 12px; font-family:Georgia,serif; font-size:30px; font-weight:400; }.estate-formula-card small { color:var(--muted); font-size:12px; line-height:1.6; }
 .estate-quality-section { padding:120px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#10100f; }
-.estate-quality-grid { display:grid; grid-template-columns:repeat(6,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
-.estate-quality-grid article { grid-column:span 2; display:grid; grid-template-columns:auto 1fr; gap:22px; min-height:190px; padding:27px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
-.estate-quality-grid article:nth-child(4),.estate-quality-grid article:nth-child(5) { grid-column:span 3; }
+.estate-quality-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.estate-quality-grid article { grid-column:span 1; display:grid; grid-template-columns:auto 1fr; gap:22px; min-height:190px; padding:27px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+
 .estate-quality-grid>article>span { color:var(--copper); font-family:monospace; font-size:11px; }
 .estate-quality-grid h3 { margin:0 0 12px; font-family:Georgia,serif; font-size:20px; font-weight:400; }.estate-quality-grid p { margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
 .estate-progress-layout { display:grid; grid-template-columns:1.15fr .85fr; gap:70px; }
@@ -651,3 +651,49 @@ footer h2 { max-width:780px; font-size:clamp(40px,5vw,68px); }
   .nba-score-card>strong { font-size:62px; }
   .project-flow-section { padding:80px 0; }
 }
+
+/* EstateFlow release presentation */
+.estate-case-study .estate-hero-grid { align-items:start; }
+.estate-access-guide { margin-top:22px; padding:20px 0 0; border-top:1px solid var(--line); max-width:760px; }
+.estate-access-guide p { margin:0 0 12px; color:var(--muted); font-size:12px; line-height:1.75; }
+.estate-access-guide strong { display:block; color:var(--cream); font-size:12px; font-weight:500; }
+.estate-access-guide a { color:var(--copper); text-decoration:underline; text-underline-offset:4px; }
+.estate-access-guide>span { display:block; margin-top:18px; color:var(--copper); font-family:monospace; font-size:10px; line-height:1.6; }
+.estate-release-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; padding:30px 0; margin-top:48px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.estate-release-metrics strong,.estate-release-metrics span { display:block; }
+.estate-release-metrics strong { font-family:Georgia,serif; font-size:34px; font-weight:400; color:var(--cream); }
+.estate-release-metrics span { margin-top:9px; color:var(--muted); font-size:12px; line-height:1.5; }
+.estate-case-study .estate-pipeline { margin-top:38px; }
+.estate-case-study .estate-section-heading h2 { font-size:clamp(30px,3.5vw,52px); line-height:1.15; }
+.estate-dashboard-caption { max-width:850px; margin:24px 0 0; text-align:left; color:var(--muted); }
+.estate-dashboard-card>a { padding:0; }
+.estate-dashboard-card img { clip-path:inset(0 1%); }
+.project-visual.estate-preview { aspect-ratio:16/9; min-height:0; }
+.estate-preview-shot { object-fit:contain; }
+.estate-forecast-layout { display:grid; grid-template-columns:1.2fr 1fr; gap:56px; align-items:start; }
+.estate-method-note { padding-top:18px; border-top:1px solid var(--line); font-size:13px!important; }
+.estate-forecast-result { padding:32px; border:1px solid var(--line); background:linear-gradient(145deg,rgba(98,183,170,.08),transparent); }
+.estate-forecast-result>span { color:var(--copper); font-family:monospace; font-size:10px; line-height:1.7; }
+.estate-forecast-result>div { display:flex; align-items:center; gap:22px; margin:30px 0 18px; }
+.estate-forecast-result strong { font-family:Georgia,serif; font-size:42px; font-weight:400; }
+.estate-forecast-result strong:last-child { color:var(--estate-teal); }
+.estate-forecast-result i { font-style:normal; color:var(--muted); }
+.estate-forecast-result p,.estate-forecast-result small { color:var(--muted); font-size:12px; line-height:1.7; }
+.estate-handbook-section { padding-top:55px; padding-bottom:55px; }
+.estate-handbook-card { display:grid; grid-template-columns:1.4fr 1fr; gap:56px; padding:42px; border:1px solid var(--line); background:#11110f; }
+.estate-handbook-card h2 { font-family:Georgia,serif; font-size:36px; font-weight:400; line-height:1.2; }
+.estate-handbook-card p:not(.section-index) { color:var(--muted); font-size:14px; line-height:1.8; }
+.estate-handbook-actions { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:16px; }
+.estate-handbook-actions .primary-button { display:inline-flex; align-items:center; gap:12px; }
+.estate-handbook-actions>span { color:var(--muted); font-size:11px; }
+.estate-handbook-actions>a:not(.primary-button) { color:var(--copper); font-size:12px; line-height:1.6; }
+.illustrative-note { position:relative; z-index:1; color:var(--muted); font-size:10px; margin:16px 0 0; }
+.model-method-list { display:flex; flex-direction:column; gap:14px; color:var(--cream); font-size:12px; }
+.model-method-list span { padding-bottom:9px; border-bottom:1px solid var(--line); }
+@media(max-width:900px) { .estate-forecast-layout,.estate-handbook-card { grid-template-columns:1fr; gap:30px; } .estate-release-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px) { .estate-handbook-card { padding:24px; }.estate-release-metrics strong { font-size:28px; }.estate-forecast-result { padding:24px; }.estate-forecast-result strong { font-size:34px; }.estate-actions>* { justify-content:center; width:100%; }.estate-access-guide p { font-size:12px; } }
+
+/* Keyboard access and clear contact behaviour */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible { outline:2px solid var(--copper); outline-offset:4px; }
+.contact-form-note { margin:12px 0 0; color:var(--muted); font-size:11px; line-height:1.6; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }

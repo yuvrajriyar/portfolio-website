@@ -5,8 +5,8 @@ const projects = [
   {
     eyebrow: "Housing analytics · End-to-end pipeline",
     title: "EstateFlow",
-    description: "A reproducible housing-market analytics pipeline: Zillow data moves through Python and PostgreSQL into a five-page Power BI report with ZIP detail and a separately labelled forecast experiment.",
-    stack: ["Python", "PostgreSQL", "SQL", "Docker", "Power BI", "Data quality"],
+    description: "A shipped housing-market analytics platform covering 462,000+ matched ZIP-month records. Explore five web and Power BI views, geographic comparisons, validated SQL metrics and a separately labelled forecast experiment.",
+    stack: ["Python", "PostgreSQL", "SQL", "Power BI", "DAX", "Next.js", "CI"],
     href: "https://github.com/yuvrajriyar/EstateFlow",
     detailsHref: "/projects/estateflow",
     visual: <EstateFlowVisual />,
@@ -21,12 +21,21 @@ const projects = [
     visual: <ProTechVisual />,
   },
   {
-  eyebrow: "Operations analytics · Soaring Roadlines Inc.",
+    eyebrow: "Operations analytics · Soaring Roadlines Inc.",
     title: "Dispatch Command Centre",
     description: "A practical dispatch tool for tracking active loads across a 20-truck fleet, estimating empty dates, prioritising backloads, and making twice-daily planning easier.",
     stack: ["Python", "Streamlit", "SQLite", "Pandas"],
     detailsHref: "/projects/dispatch-command-centre",
     visual: <DispatchVisual />,
+  },
+  {
+    eyebrow: "Housing economics · Statistical modelling",
+    title: "King County Housing Market Analysis",
+    description: "A multiple-linear-regression study of roughly 15,000 home sales, examining how structural, quality, and geographic characteristics influence sale prices and testing which findings remain defensible under model diagnostics.",
+    stack: ["R", "Multiple regression", "ANOVA", "Diagnostics"],
+    detailsHref: "/projects/king-county-housing",
+    status: "Academic analysis",
+    visual: <HousingRegressionVisual />,
   },
   {
     eyebrow: "Statistical modelling",
@@ -37,14 +46,7 @@ const projects = [
     detailsHref: "/projects/nba-injury-risk",
     visual: <NBAVisual />,
   },
-  {
-    eyebrow: "Housing economics · Statistical modelling",
-    title: "King County Housing Market Analysis",
-    description: "A multiple-linear-regression study of roughly 15,000 home sales, examining how structural, quality, and geographic characteristics influence sale prices and testing which findings remain defensible under model diagnostics.",
-    stack: ["R", "Multiple regression", "ANOVA", "Diagnostics"],
-    detailsHref: "/projects/king-county-housing",
-    visual: <HousingRegressionVisual />,
-  },
+
 ];
 
 export default function ProjectsPage() {
@@ -71,7 +73,7 @@ export default function ProjectsPage() {
               <div className="tag-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
               <div className="card-actions">
                 {project.detailsHref ? <Link className="card-link" href={project.detailsHref}>View case study →</Link> : null}
-                {project.href ? <a className="card-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a> : <span className="card-status">Private operational system</span>}
+                {project.href ? <a className="card-link" href={project.href} target="_blank" rel="noreferrer">View repository ↗</a> : <span className="card-status">{project.status ?? "Private operational system"}</span>}
               </div>
             </div>
           </article>

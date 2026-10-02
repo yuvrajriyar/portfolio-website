@@ -22,7 +22,8 @@ export default function ContactForm() {
       </div>
       <label><span>Subject</span><input name="subject" type="text" placeholder="What would you like to discuss?" required /></label>
       <label><span>Message</span><textarea name="message" rows={5} placeholder="Write your message here" required /></label>
-      <button type="submit">Send message <span aria-hidden="true">↗</span></button>
+      <button type="submit">Open email draft <span aria-hidden="true">↗</span></button>
+      <p className="contact-form-note">Opens your email app with your message filled in.</p>
     </form>
   );
 }

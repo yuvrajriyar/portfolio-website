@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://yuvrajriyar.vercel.app"),
   title: "Yuvraj Riyar | Data & Business Analytics",
   description: "Portfolio of Yuvraj Riyar, a UC Davis Statistics (Applied) graduate building analytics systems across sports, operations, and financial decision-making.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },

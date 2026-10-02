@@ -6,12 +6,19 @@ A personal portfolio for my work across data, business, financial, operational, 
 
 ## Featured work
 
-- **EstateFlow:** an end-to-end housing-market pipeline with a five-page Power BI report covering national and regional comparisons, ZIP detail, an exploratory forecast, and a reader's guide.
+- **EstateFlow:** a shipped housing-market platform with 462,410 matched ZIP-month records, a [five-view web dashboard](https://yuvrajriyar.vercel.app/projects/estateflow/dashboard), a [downloadable Power BI report](https://github.com/yuvrajriyar/EstateFlow/releases/download/v1.0.0/EstateFlow_Dashboard.pbix), layered SQL quality controls, an exploratory forecast and a [21-page handbook](https://yuvrajriyar.vercel.app/EstateFlow-Handbook.pdf).
 - **ProTech:** an athlete-performance platform built with Aggie Sports Analytics for UC Davis Football, including team and case-competition imagery.
 - **Dispatch Command Centre:** an internal Python application supporting load visibility and daily fleet planning at Soaring Roadlines Inc.
 - **NBA Injury Risk Analysis** and **King County Housing Market Analysis:** statistical modelling case studies.
 
 Every project has a dedicated page with context, methods, visuals, and links to the available implementation.
+
+## Résumé and documentation
+
+- [Current master résumé](https://yuvrajriyar.vercel.app/Yuvraj-Riyar-Resume.pdf)
+- [EstateFlow case study](https://yuvrajriyar.vercel.app/projects/estateflow)
+- [EstateFlow handbook](https://yuvrajriyar.vercel.app/EstateFlow-Handbook.pdf)
+- The dashboard uses a fixed, verified **August 2026** snapshot. Its code and static exports live in `app/projects/estateflow/dashboard` and `public/data/estateflow`; the pipeline and editable Power BI project live in the separate EstateFlow repository.
 
 ## About the site
 

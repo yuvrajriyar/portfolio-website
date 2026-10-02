@@ -104,6 +104,12 @@ export default function EstateFlowPage() {
               <a className="secondary-button" href="https://github.com/yuvrajriyar/EstateFlow/releases/download/v1.0.0/EstateFlow_Dashboard.pbix">Download Power BI report <ExternalArrow /></a>
               <a className="secondary-button" href="https://github.com/yuvrajriyar/EstateFlow" target="_blank" rel="noreferrer">View source on GitHub <ExternalArrow /></a>
             </div>
+            <div className="estate-access-guide" aria-label="Ways to explore EstateFlow">
+              <p><strong>In your browser</strong> Five interactive views, geographic filters and CSV exports. No account required.</p>
+              <p><strong>In Power BI</strong> A 55 MiB download with all five pages and saved data. Open in free Power BI Desktop for Windows. Exploring needs no database; refreshing requires your own setup.</p>
+              <p><strong>Behind the build</strong> <a href="/EstateFlow-Handbook.pdf" target="_blank" rel="noreferrer">Read the 21-page project handbook ↗</a> for architecture, methods and operating procedures.</p>
+              <span>October 2026 release · Observations through 31 August 2026</span>
+            </div>
           </div>
           <div className="estate-hero-facts">
             <div><span>Role</span><strong>Solo builder</strong></div>
@@ -112,7 +118,12 @@ export default function EstateFlowPage() {
             <div><span>Stack</span><strong>Python · PostgreSQL · Power BI</strong></div>
           </div>
         </div>
-        <p className="estate-dashboard-caption">The web dashboard opens directly in your browser without an account. The 55 MiB Power BI download includes all five pages and the August 2026 data. Open it in free Power BI Desktop for Windows; no database setup is needed to explore the saved report. Refreshing requires the source project and your own database.</p>
+        <div className="estate-release-metrics" aria-label="Verified release coverage">
+          <div><strong>462,410</strong><span>Matched ZIP-month records</span></div>
+          <div><strong>8,424</strong><span>ZIPs in the historical model</span></div>
+          <div><strong>8,421</strong><span>ZIPs in the latest snapshot</span></div>
+          <div><strong>5</strong><span>Views in each dashboard</span></div>
+        </div>
         <PipelineDiagram />
       </section>
 
@@ -121,7 +132,7 @@ export default function EstateFlowPage() {
           <div><p className="section-index">01 / Overview</p><h2>From public files to a decision-ready market view.</h2></div>
           <div className="estate-narrative">
             <p>Housing data is plentiful, but comparing markets responsibly requires more than downloading a spreadsheet. Home-value and rent histories arrive with different coverage, wide monthly columns, missing observations and geographic inconsistencies.</p>
-            <p>EstateFlow creates a controlled path from those files to two usable views: a historical ZIP-month model and a latest-market snapshot. Python profiles and reshapes the sources, PostgreSQL stages and joins them, SQL checks the grain and derived measures, and Power BI makes the result easier to explore.</p>
+            <p>EstateFlow creates a controlled path from those files to two usable views: a historical ZIP-month model and a latest-market snapshot. Python profiles and reshapes the sources, PostgreSQL stages and joins them, SQL checks the grain and derived measures, and the web dashboard and Power BI report make the same reviewed snapshot easier to explore.</p>
           </div>
           <aside className="estate-principle"><span>The design principle</span><p>Every reported metric should be traceable to its source and independently testable.</p></aside>
         </div>
@@ -140,7 +151,7 @@ export default function EstateFlowPage() {
           <article><span>01</span><h3>Source</h3><p>Zillow Home Value Index and Observed Rent Index files, accompanied by documented coverage and limitations.</p></article>
           <article><span>02</span><h3>Transform</h3><p>Python and pandas profile the sources, preserve ZIP codes, reshape dates and enforce row-level assertions.</p></article>
           <article><span>03</span><h3>Model</h3><p>PostgreSQL staging tables feed a shared intermediate view joined on ZIP code and month.</p></article>
-          <article><span>04</span><h3>Explore</h3><p>Power BI reads the historical and latest-market marts for geographic filters, trends, growth comparisons, and ZIP-level screening.</p></article>
+          <article><span>04</span><h3>Explore</h3><p>Power BI imports the marts; the web dashboard reads validated exports of the same snapshot for filters, trends, geographic comparisons and CSV downloads.</p></article>
         </div>
       </section>
 
@@ -188,8 +199,16 @@ export default function EstateFlowPage() {
         </div>
       </section>
 
+      <section className="section-shell estate-section estate-forecast-story">
+        <div className="estate-section-heading"><p className="section-index">07 / Forecast experiment</p><h2>Test the simple answer before adding complexity.</h2></div>
+        <div className="estate-forecast-layout">
+          <div className="estate-narrative"><p>I compared a flat last-value benchmark with a damped log trend at three, six and twelve months. Separate chronological periods handle model selection, validation, interval calibration and final evaluation.</p><p>Only the twelve-month rent model cleared the material-improvement threshold. Home values and shorter rent horizons retain the flat benchmark. The published experiment includes 31,566 projections across 5,261 eligible ZIPs, with empirical 80% and 95% intervals.</p><p className="estate-method-note">These are retrospective results on revised Zillow index history. They do not establish future accuracy, individual property values or investment returns. Forecasts remain separate from observed data throughout both dashboards.</p></div>
+          <aside className="estate-forecast-result"><span>12-MONTH RENT · FINAL RETROSPECTIVE EVALUATION</span><div><strong>2.41%</strong><i>→</i><strong>1.74%</strong></div><p>Median absolute percentage error<br />Flat benchmark → damped trend</p><small>53,111 evaluated cases · August source vintage</small></aside>
+        </div>
+      </section>
+
       <section className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">07 / Progress</p><h2>The pipeline and five-page report are verified locally.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">08 / Delivery</p><h2>A complete path from source files to public dashboards.</h2></div>
         <div className="estate-progress-layout">
           <div className="estate-milestones">
             {milestones.map((milestone) => (
@@ -210,8 +229,15 @@ export default function EstateFlowPage() {
 
       <section className="estate-limitations">
         <div className="section-shell estate-limitations-grid">
-          <div><p className="section-index">08 / Judgement</p><h2>What the metric does not claim.</h2></div>
+          <div><p className="section-index">09 / Judgement</p><h2>What the metric does not claim.</h2></div>
           <div><p>Gross rent-to-value is useful for a first-pass comparison, but it is not net yield or cash flow. It does not account for financing, vacancy, taxes, insurance, management, maintenance or transaction costs. Zillow indices are modelled estimates, and coverage varies across ZIP codes and months.</p><p>The report keeps those limits visible, does not estimate missing values, and shows year-over-year coverage alongside growth measures so a reader can judge how much of the market supports the comparison.</p></div>
+        </div>
+      </section>
+
+      <section className="section-shell estate-section estate-handbook-section">
+        <div className="estate-handbook-card">
+          <div><p className="section-index">10 / Project handbook</p><h2>The decisions behind the dashboard.</h2><p>A 21-page record of the architecture, metric definitions, validation, forecasting, Power BI and web implementation, refresh procedures, troubleshooting and development decisions.</p><p>AI supported implementation, debugging and documentation. I remained responsible for rebuilding the database, checking the outputs, reviewing the report and deciding what to release. The handbook makes that workflow and its evidence explicit.</p></div>
+          <div className="estate-handbook-actions"><a className="primary-button" href="/EstateFlow-Handbook.pdf" target="_blank" rel="noreferrer">Read the handbook <ExternalArrow /></a><span>PDF · 21 pages · Release edition 1.0</span><a href="https://github.com/yuvrajriyar/EstateFlow/blob/main/docs/handbook.md" target="_blank" rel="noreferrer">Browse the documentation on GitHub ↗</a></div>
         </div>
       </section>
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const contributions = [
   ["Project leadership", "Coordinated a six-person cross-functional team, priorities, stakeholder requirements, and development workflows."],
-  ["Data systems", "Contributed Supabase uploads, storage workflows, record validation, and checks across multi-year athlete data."],
+  ["Data systems", "Contributed Supabase uploads, storage workflows, Python and bulk-upload workflows, PostgreSQL/Supabase integration, record validation and checks across multi-year athlete data."],
   ["Visual analytics", "Built React charts, spider profiles, force-production views, and year-over-year athlete comparisons."],
   ["Product delivery", "Helped translate technical outputs into player- and position-level insights for coaches and strength staff."],
 ];
@@ -65,6 +65,7 @@ export default function ProTechPage() {
           <article><strong>Athlete profiles</strong><p>Centralised performance history with roster context and images.</p></article>
           <article><strong>Spider charts</strong><p>Multi-metric profiles for quickly reading an athlete&apos;s relative strengths.</p></article>
           <article><strong>Year-over-year views</strong><p>Comparisons designed to surface development rather than isolated test results.</p></article>
+          <article><strong>Player overviews</strong><p>AI-generated summaries sit alongside the underlying charts and measurements, helping staff review a player while retaining the source data for context.</p></article>
           <article><strong>Automated image handling</strong><p>Pose-aware cropping and structured uploads to reduce repetitive preparation.</p></article>
         </div>
       </section>
