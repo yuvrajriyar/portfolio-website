@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "EstateFlow Case Study | Yuvraj Riyar",
-  description: "An end-to-end housing-market analytics system, from Zillow data through Python and PostgreSQL into an interactive Power BI market explorer.",
+  description: "An end-to-end housing-market analytics system, from Zillow data through Python and PostgreSQL into interactive web and Power BI dashboards.",
 };
 
 const qualityChecks = [
@@ -24,7 +24,7 @@ const milestones = [
   { status: "complete", title: "Forecast experiment and CI", detail: "31,566 August-vintage forecast rows published with chronological evaluation and empirical intervals; PostgreSQL integration tests pass in CI." },
   { status: "complete", title: "Local Desktop acceptance", detail: "All five pages refreshed and visually reviewed on 1 October 2026; navigation, Clear filters, and launcher-based startup reset confirmed by the author." },
   { status: "complete", title: "Public Power BI download", detail: "October 2026 release includes a self-contained PBIX with all five pages and imported August data, available without a Power BI Service account." },
-  { status: "next", title: "Interactive online publication", detail: "The case study and screenshots are public. A browser-accessible interactive report remains to be published and access-tested." },
+  { status: "complete", title: "Interactive web dashboard", detail: "Five browser views provide geographic filters, historical trends, market comparisons, ZIP profiles, experimental forecasts and CSV exports without an account." },
 ];
 
 const dashboardImages = [
@@ -98,9 +98,10 @@ export default function EstateFlowPage() {
             <div className="estate-status"><span /> Released October 2026 · August data</div>
             <p className="section-index">Independent analytics and data engineering</p>
             <h1>EstateFlow</h1>
-            <p className="estate-deck">A reproducible analytics system that transforms Zillow home-value and rent data through Python and PostgreSQL into a five-page Power BI report for comparing housing markets across the United States.</p>
+            <p className="estate-deck">A reproducible analytics system that transforms Zillow home-value and rent data through Python and PostgreSQL into interactive web and Power BI dashboards for comparing housing markets across the United States.</p>
             <div className="estate-actions">
-              <a className="primary-button" href="https://github.com/yuvrajriyar/EstateFlow/releases/download/v1.0.0/EstateFlow_Dashboard.pbix">Download Power BI report <ExternalArrow /></a>
+              <Link className="primary-button" href="/projects/estateflow/dashboard">Open web dashboard <ExternalArrow /></Link>
+              <a className="secondary-button" href="https://github.com/yuvrajriyar/EstateFlow/releases/download/v1.0.0/EstateFlow_Dashboard.pbix">Download Power BI report <ExternalArrow /></a>
               <a className="secondary-button" href="https://github.com/yuvrajriyar/EstateFlow" target="_blank" rel="noreferrer">View source on GitHub <ExternalArrow /></a>
             </div>
           </div>
@@ -111,7 +112,7 @@ export default function EstateFlowPage() {
             <div><span>Stack</span><strong>Python · PostgreSQL · Power BI</strong></div>
           </div>
         </div>
-        <p className="estate-dashboard-caption">The 55 MiB download includes all five pages and the August 2026 data. Open it in free Power BI Desktop for Windows; no database setup is needed to explore the saved report. Refreshing requires the source project and your own database.</p>
+        <p className="estate-dashboard-caption">The web dashboard opens directly in your browser without an account. The 55 MiB Power BI download includes all five pages and the August 2026 data. Open it in free Power BI Desktop for Windows; no database setup is needed to explore the saved report. Refreshing requires the source project and your own database.</p>
         <PipelineDiagram />
       </section>
 
@@ -130,7 +131,7 @@ export default function EstateFlowPage() {
         <div className="estate-section-heading"><p className="section-index">02 / Dashboard</p><h2>From the national picture to a closer market comparison.</h2></div>
         <p className="estate-dashboard-intro">The five-page report moves from national and state-level comparisons to a ZIP-level detail view and a separately labelled forecast experiment. A dedicated guide explains the measures and their limits.</p>
         <DashboardGallery />
-        <p className="estate-dashboard-caption">Screenshots show the August 2026 Zillow snapshot, refreshed and reviewed in Power BI Desktop on 1 October 2026. These are static previews. Download the Power BI report above to interact with the full dashboard in Desktop.</p>
+        <p className="estate-dashboard-caption">Screenshots show the August 2026 Zillow snapshot, refreshed and reviewed in Power BI Desktop on 1 October 2026. These are static previews. Open the web dashboard above to explore in your browser, or download the Power BI report for Desktop.</p>
       </section>
 
       <section id="architecture" className="section-shell estate-section">
@@ -201,7 +202,7 @@ export default function EstateFlowPage() {
           <aside className="estate-next-card">
             <p className="section-index">Final release check</p>
             <h3>Explore the released report</h3>
-            <p>The August pipeline, forecasts, and Desktop report passed local acceptance. The public release includes a ready-to-use Power BI download, screenshots and source code. Browser-based Power BI access remains a future option.</p>
+            <p>The August pipeline, forecasts, and Desktop report passed local acceptance. The public release includes an interactive web dashboard, a ready-to-use Power BI download, screenshots and source code. The web version uses the same reviewed August snapshot and requires no Power BI account.</p>
             <div><span>01</span>August pipeline and forecasts verified</div><div><span>02</span>Five refreshed pages visually reviewed</div><div><span>03</span>Navigation and filter resets confirmed</div>
           </aside>
         </div>

@@ -1,0 +1,9 @@
+export type ZipRow = { zip:string; state:string; city:string; metro:string; county:string; home:number; rent:number; homeYoy:number|null; rentYoy:number|null };
+export type Observation = [number,number,number];
+export type History = Record<string, Observation[]>;
+export type Forecast = { metric:'home'|'rent'; horizon:number; month:string; model:string; estimate:number; lower80:number; upper80:number; lower95:number; upper95:number };
+export type Summary = { asOf:string; months:string[]; latest:ZipRow[]; national:[number,number,number,number][]; recordCount:number; historicalZipCount:number; forecastZipCount:number; forecastCount:number; source:{commit:string; retrieved:string; zhviSha256:string; zoriSha256:string; files:string[]; method:string}; evaluation:Record<string,string>[] };
+export type Review = { summary:Summary; history:History; forecasts:Record<string,Forecast[]> };
+export type Scope = { state:string; metro:string; city:string };
+export type Metrics = { count:number; home:number|null; rent:number|null; gross:number|null; homeYoy:number|null; rentYoy:number|null; coverage:number|null };
+export type PlotPoint = { x:number; y:number; lower?:number; upper?:number; label?:string; count?:number };
