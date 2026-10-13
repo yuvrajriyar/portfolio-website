@@ -85,3 +85,13 @@ export function EstateFlowVisual() {
     </div>
   );
 }
+
+export function PrismVisual() {
+  return (
+    <div className="project-visual prism-visual" aria-label="PRISM brand and interactive discovery workflow, currently in founding-stage development">
+      <div className="prism-visual-top"><span>FOUNDER-LED · OCTOBER 2026</span><span>FOUNDING STAGE</span></div>
+      <Image src="/images/prism-logo.png" alt="PRISM, Modern Professional Services" width={1919} height={820} className="prism-brand-preview" sizes="(max-width: 900px) 90vw, 45vw" />
+      <div className="prism-blueprint-preview"><span>OPPORTUNITY BLUEPRINT</span><strong>Understand → Explore → Build</strong><p>Five-step discovery · Editable review · Text &amp; JSON exports</p></div>
+    </div>
+  );
+}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DispatchVisual, EstateFlowVisual, HousingRegressionVisual, NBAVisual, ProTechVisual } from "../project-visuals";
+import { DispatchVisual, EstateFlowVisual, HousingRegressionVisual, NBAVisual, PrismVisual, ProTechVisual } from "../project-visuals";
 
 const projects = [
   {
@@ -19,6 +19,15 @@ const projects = [
     href: "https://github.com/AggieSportsAnalytics/ProTech",
     detailsHref: "/projects/protech",
     visual: <ProTechVisual />,
+  },
+  {
+    eyebrow: "Founder-led venture · October 2026",
+    title: "PRISM",
+    description: "A founding-stage technology service for local and family-owned businesses. I’ve built the public site, visual identity and five-step discovery tool, with branching questions, reference images and downloadable briefs. The first client pilot is in planning.",
+    stack: ["React", "TypeScript", "Vite", "WebGL", "Product design", "Discovery"],
+    detailsHref: "/projects/prism",
+    status: "Founding stage · Public site available",
+    visual: <PrismVisual />,
   },
   {
     eyebrow: "Operations analytics · Soaring Roadlines Inc.",

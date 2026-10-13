@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ContactForm from "./contact-form";
 import IntroLoader from "./intro-loader";
-import { DispatchVisual, EstateFlowVisual, NBAVisual, ProTechVisual } from "./project-visuals";
+import { DispatchVisual, EstateFlowVisual, HousingRegressionVisual, NBAVisual, PrismVisual, ProTechVisual } from "./project-visuals";
 
 const skills = [
   { mark: "SQL", name: "SQL", detail: "Queries & analysis" },
@@ -94,12 +94,20 @@ export default function Home() {
             <div className="featured-project-copy"><p className="project-eyebrow">UC Davis Football</p><h3>ProTech</h3><p>An athlete-performance platform created with Aggie Sports Analytics for football staff.</p><Link href="/projects/protech">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
+            <PrismVisual />
+            <div className="featured-project-copy"><p className="project-eyebrow">Founder-led venture · In development</p><h3>PRISM</h3><p>I’m building a technology service for local businesses, starting with the way people actually work. The public site and interactive discovery tool are built; the first pilot is next.</p><Link href="/projects/prism">Explore the progress <ArrowUpRight /></Link></div>
+          </article>
+          <article className="featured-project-card">
             <DispatchVisual />
             <div className="featured-project-copy"><p className="project-eyebrow">Soaring Roadlines Inc.</p><h3>Dispatch Command Centre</h3><p>A practical system for load visibility, backload priorities, and daily fleet decisions.</p><Link href="/projects/dispatch-command-centre">View case study <ArrowUpRight /></Link></div>
           </article>
           <article className="featured-project-card">
             <NBAVisual />
             <div className="featured-project-copy"><p className="project-eyebrow">Statistical modelling</p><h3>NBA Injury Risk Analysis</h3><p>A reproducible R analysis exploring injury risk through player characteristics, workload, and injury history.</p><Link href="/projects/nba-injury-risk">View case study <ArrowUpRight /></Link></div>
+          </article>
+          <article className="featured-project-card">
+            <HousingRegressionVisual />
+            <div className="featured-project-copy"><p className="project-eyebrow">Housing economics</p><h3>King County Housing Analysis</h3><p>A regression study of roughly 15,000 home sales, examining the property characteristics that explain differences in sale prices.</p><Link href="/projects/king-county-housing">View case study <ArrowUpRight /></Link></div>
           </article>
         </div>
       </section>
@@ -121,6 +129,11 @@ export default function Home() {
           <div className="section-heading compact-heading"><p className="section-index">03 / Experience</p><h2>Where the work comes from.</h2></div>
           <div className="experience-grid">
             <div className="timeline">
+              <article>
+                <p className="timeline-date">Oct 2026 · Present</p><h3>PRISM</h3><p className="timeline-role">Founder · Founding-stage venture</p>
+                <div className="experience-story"><p>I’m taking the practical side of my work further with PRISM, a founder-led technology service for local and family-owned businesses. I want to understand the operation, work directly with the owner and build one improvement worth making.</p><p>So far, I’ve built the public website, brand and an interactive discovery tool that turns a broad idea into an editable brief. The first family-business pilot is still being scoped. My earlier dispatch, sports and housing projects provide the foundation, while PRISM’s own client outcomes are still ahead.</p></div>
+                <Link className="card-link" href="/projects/prism">See what I’m building →</Link>
+              </article>
               <article>
                 <p className="timeline-date">Jun 2026 · Present</p><h3>Soaring Roadlines Inc.</h3><p className="timeline-role">Operations &amp; Financial Analyst · Fresno, California</p>
                 <div className="experience-story"><p>Working inside a family transportation business has made analytics very concrete. A late follow-up can leave a truck idle, an incomplete record can distort a margin, and a useful answer needs to fit the pace of the operation.</p><p>I built a dispatch application in Python and Streamlit that brings ETAs, empty dates, and backhaul priorities for roughly 20 trucks into one view. It cut the routine tracking process by about half and made the morning and afternoon reviews far more focused. I translated dispatcher requirements into ETA tracking, availability and priority flags, using SQLite and pandas behind the interface. Alongside it, I analyse revenue, gross profit, fuel, and transportation costs in Excel and keep the underlying freight records current through reconciliation and broker follow-ups.</p></div>
