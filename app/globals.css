@@ -698,17 +698,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .contact-form-note { margin:12px 0 0; color:var(--muted); font-size:11px; line-height:1.6; }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
 
-/* PRISM: actual identity and a concise discovery-workflow preview. */
-.project-visual.prism-visual { display:flex; flex-direction:column; justify-content:space-between; padding:25px; background:#f5f6f8; color:#192333; min-height:330px; }
-.project-visual.prism-visual::after { display:none; }
-.prism-visual-top { display:flex; justify-content:space-between; gap:16px; color:#556275; font:9px monospace; letter-spacing:.08em; }
-.prism-brand-preview { display:block; width:75%; height:auto; max-height:175px; object-fit:contain; margin:10px auto; }
-.prism-blueprint-preview { padding:16px 18px; border:1px solid #ccd7e6; border-radius:12px; background:linear-gradient(120deg,#fff,#e9eff9); }
-.prism-blueprint-preview>span { display:block; color:#476692; font:9px monospace; letter-spacing:.12em; }
-.prism-blueprint-preview strong { display:block; margin:8px 0; font-size:18px; font-weight:500; }
-.prism-blueprint-preview p { margin:0; color:#56657a; font-size:11px; line-height:1.6; }
-.prism-case-study .prism-visual { height:auto; min-height:400px; }
-.prism-case-study .prism-brand-preview { max-height:240px; width:55%; }
+/* PRISM uses the portfolio palette; its public product screenshots retain their original colours. */
+.project-visual.prism-visual { display:flex; flex-direction:column; justify-content:space-between; padding:25px; min-height:330px; background:radial-gradient(ellipse at 75% 35%,rgba(55,93,138,.19),transparent 65%),linear-gradient(145deg,#12191f,#0a0d0e); color:var(--cream); }
+.prism-visual-top { position:relative; z-index:1; display:flex; justify-content:space-between; gap:16px; color:#91999d; font:9px monospace; letter-spacing:.08em; }
+.prism-brand-preview { position:relative; z-index:1; display:block; width:75%; height:auto; max-height:175px; object-fit:contain; margin:10px auto; filter:invert(1) hue-rotate(180deg); mix-blend-mode:screen; opacity:.94; }
+.prism-blueprint-preview { position:relative; z-index:1; padding:17px 18px; border:1px solid rgba(216,195,152,.22); border-radius:0; background:rgba(4,9,12,.45); }
+.prism-blueprint-preview>span { display:block; color:var(--copper); font:9px monospace; letter-spacing:.12em; }
+.prism-blueprint-preview strong { display:block; margin:10px 0; font-size:18px; font-weight:400; color:var(--cream); }
+.prism-blueprint-preview p { margin:0; color:#a2adb7; font-size:11px; line-height:1.6; }
 .prism-product-shot { margin:0; border:1px solid var(--line); overflow:hidden; background:#f5f6f8; }
 .prism-product-shot img { display:block; width:100%; height:auto; }
 .prism-product-shot figcaption { padding:18px 22px; color:var(--muted); background:#11110f; font-size:12px; line-height:1.6; }

@@ -24,6 +24,7 @@ export default function PrismPage() {
         status="Founding stage · Public site available"
         eyebrow="PRISM / Modern Professional Services"
         title="PRISM"
+        website={site}
         deck="My next step is working directly with business owners: understanding the details of their operation and building technology around the people in it."
         facts={[
           { label: "Role", value: "Founder · Product and development" },
@@ -32,7 +33,6 @@ export default function PrismPage() {
           { label: "Stack", value: "React · TypeScript · Vite · WebGL" },
         ]}
       ><figure className="prism-product-shot"><Image src="/images/prism-home.jpg" alt="PRISM public homepage with its geometric logo, glass navigation and business-focused introduction" width={1348} height={926} sizes="(max-width: 900px) 100vw, 85vw" /><figcaption>The current public website: PRISM’s own identity, offer and founder-led approach.</figcaption></figure></CaseStudyHero>
-      <div className="section-shell"><a className="primary-button" href={site} target="_blank" rel="noreferrer">Visit PRISM <ExternalArrow /></a></div>
 
       <section id="project-story" className="estate-overview">
         <div className="section-shell estate-overview-grid">

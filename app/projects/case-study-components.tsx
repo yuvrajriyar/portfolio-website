@@ -24,6 +24,7 @@ export function CaseStudyHero({
   deck,
   facts,
   repository,
+  website,
   children,
 }: {
   status: string;
@@ -32,6 +33,7 @@ export function CaseStudyHero({
   deck: string;
   facts: Fact[];
   repository?: string;
+  website?: string;
   children: ReactNode;
 }) {
   return (
@@ -44,8 +46,9 @@ export function CaseStudyHero({
           <h1>{title}</h1>
           <p className="estate-deck">{deck}</p>
           <div className="estate-actions">
+            {website ? <a className="primary-button" href={website} target="_blank" rel="noreferrer">Visit {title} <ExternalArrow /></a> : null}
             {repository ? <a className="primary-button" href={repository} target="_blank" rel="noreferrer">View repository <ExternalArrow /></a> : null}
-            <a className={repository ? "secondary-button" : "primary-button"} href="#project-story">Read the case study</a>
+            <a className={repository || website ? "secondary-button" : "primary-button"} href="#project-story">Read the case study</a>
           </div>
         </div>
         <div className="estate-hero-facts">
