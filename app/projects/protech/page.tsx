@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 };
 
 const contributions = [
-  ["Project coordination", "Coordinated assigned tasks and feedback within a six-person cross-functional team working with UC Davis Football stakeholders."],
+  ["Project coordination", "Coordinated project tasks and stakeholder feedback within a six-person team. Sachin Venkat was the project manager; I contributed across implementation, data preparation, and delivery."],
   ["Data systems", "Contributed Supabase uploads and storage workflows, record validation, missing-data checks, and consistency fixes across multi-year athlete data."],
-  ["Visual analytics", "Refined React interfaces and chart presentation, including spider and force-production views, and improved the handling of profiles with incomplete data."],
+  ["Visual analytics", "Developed and refined React spider charts, ForcePlate and NordBoard components, roster formatting, and missing-data handling so empty charts did not distract from useful measurements."],
   ["Product delivery", "Prepared athlete images, incorporated coaching feedback, and presented the finished platform at the ASA case competition."],
 ];
 
@@ -22,7 +22,7 @@ export default function ProTechPage() {
         status="Delivered to UC Davis Football"
         eyebrow="Athlete performance platform"
         title="ProTech"
-        deck="A centralised performance platform designed to help football staff explore multi-year athlete development without relying on fragmented spreadsheets."
+        deck="A full-stack dashboard for UC Davis Football that turns athlete testing exports into performance histories, teammate comparisons, and written summaries for coaching and strength staff."
         facts={[
           { label: "Role", value: "Data analyst · Coordination and front end" },
           { label: "Team", value: "Six contributors" },
@@ -30,6 +30,7 @@ export default function ProTechPage() {
           { label: "Stack", value: "React · Supabase · Chart.js" },
         ]}
         repository="https://github.com/AggieSportsAnalytics/ProTech"
+        website="https://aggiesportsanalytics.com/projects/protech"
       >
         <ProTechCarousel />
       </CaseStudyHero>
@@ -37,7 +38,7 @@ export default function ProTechPage() {
       <section id="project-story" className="estate-overview">
         <div className="section-shell estate-overview-grid">
           <div><p className="section-index">01 / Context</p><h2>Performance data existed. A usable system did not.</h2></div>
-          <div className="estate-narrative"><p>UC Davis Football staff worked across roster, strength, ForcePlate, NordBord, speed, and body-composition records collected over multiple seasons. The challenge was not simply drawing charts. It was creating a dependable product that made those records easier to navigate and compare.</p><p>ProTech brought the information into one athlete-focused experience, giving staff a clearer way to review individual development, compare positions, and recognise changes over time.</p></div>
+          <div className="estate-narrative"><p>Testing records were spread across files and seasons. ProTech gave coaching and strength staff a shared place to follow each athlete, compare teammates, and review changes in performance.</p><p>The sections below describe the team product. My contribution centered on visualizations, data quality, upload and image workflows, stakeholder feedback, and presentation.</p></div>
           <aside className="estate-principle"><span>Product principle</span><p>Make complex performance data fast enough to use inside a real coaching workflow.</p></aside>
         </div>
       </section>
@@ -51,10 +52,10 @@ export default function ProTechPage() {
         <div className="section-shell">
           <div className="estate-section-heading"><p className="section-index">03 / System</p><h2>From raw testing records to an athlete profile.</h2></div>
           <div className="project-flow-grid">
-            <article><span>01</span><h3>Collect</h3><p>Roster, strength, ForcePlate, NordBord, speed, jump, and body-composition records.</p></article>
-            <article><span>02</span><h3>Validate</h3><p>Check uploads, field consistency, player matching, and multi-year record integrity.</p></article>
-            <article><span>03</span><h3>Visualise</h3><p>Convert measurements into charts, profiles, comparisons, and position-level views.</p></article>
-            <article><span>04</span><h3>Use</h3><p>Give staff a central place to review athlete development and support conversations.</p></article>
+            <article><span>01</span><h3>Import</h3><p>Python prepares testing exports; Node scripts load Supabase. An Express upload route also parses spreadsheets for ad hoc entry.</p></article>
+            <article><span>02</span><h3>Store</h3><p>Supabase holds testing records, athlete images, and saved overviews. Upload checks help keep player and season data consistent.</p></article>
+            <article><span>03</span><h3>Compare</h3><p>React retrieves athlete records and uses Chart.js and Recharts to show testing history and side-by-side athlete comparisons.</p></article>
+            <article><span>04</span><h3>Review</h3><p>Coaches review charts alongside written overviews generated from computed trends, with cached results avoiding repeated requests.</p></article>
           </div>
         </div>
       </section>
@@ -62,18 +63,27 @@ export default function ProTechPage() {
       <section className="section-shell estate-section">
         <div className="estate-section-heading"><p className="section-index">04 / Features</p><h2>Visuals built around the questions staff actually ask.</h2></div>
         <div className="project-feature-list">
-          <article><strong>Athlete profiles</strong><p>Centralised performance history with roster context and images.</p></article>
-          <article><strong>Spider charts</strong><p>Multi-metric profiles for quickly reading an athlete&apos;s relative strengths.</p></article>
-          <article><strong>Year-over-year views</strong><p>Comparisons designed to surface development rather than isolated test results.</p></article>
-          <article><strong>Player overviews</strong><p>AI-generated summaries sit alongside the underlying charts and measurements, helping staff review a player while retaining the source data for context.</p></article>
-          <article><strong>Automated image handling</strong><p>Pose-aware cropping and structured uploads to reduce repetitive preparation.</p></article>
+          <article><strong>Athlete profiles and comparisons</strong><p>Testing history, season-specific photos, spider charts, and ForcePlate / NordBoard views help staff review development and compare two athletes.</p></article>
+          <article><strong>Spreadsheet imports</strong><p>CSV, XLS, and XLSX entry supports existing equipment-export workflows alongside scripted cleaning and bulk loading.</p></article>
+          <article><strong>Player overviews</strong><p>Trend calculations are passed to the language model rather than unprocessed measurements. Supabase caches each overview against its analytical inputs; staff can request regeneration.</p></article>
+          <article><strong>Pose-aware image handling</strong><p>MoveNet body keypoints guide Sharp cropping. Unreliable poses are rejected; accepted photos are organized by athlete and year, with previous images archived.</p></article>
+          <article><strong>Protected athlete information</strong><p>Supabase authentication restricts recruitment and alumni routes.</p></article>
+        </div>
+      </section>
+
+      <section className="section-shell estate-section">
+        <div className="estate-section-heading"><p className="section-index">05 / Architecture</p><h2>The stack behind the coaching workflow.</h2></div>
+        <div className="project-feature-list">
+          <article><strong>Interface</strong><p>React 19, Vite, Tailwind CSS, and Radix UI, with Chart.js and Recharts for visualization.</p></article>
+          <article><strong>Services and storage</strong><p>Express on Node.js; Supabase for PostgreSQL data, authentication, image storage, and overview caching. The frontend runs on Vercel and the backend on Render.</p></article>
+          <article><strong>AI and image processing</strong><p>Groq is the default overview provider, with OpenRouter support. TensorFlow.js / MoveNet and Sharp handle pose detection and cropping.</p></article>
         </div>
       </section>
 
       <section className="estate-limitations">
         <div className="section-shell estate-limitations-grid">
-          <div><p className="section-index">05 / Outcome</p><h2>Delivered to the people it was built for.</h2></div>
-          <div><p>The finished platform was presented to UC Davis Football stakeholders and used by coaching and strength staff. The project strengthened my ability to coordinate work across technical disciplines, protect data quality, and present analytical work in language decision-makers can act on.</p><p>The repository shows the product structure, while athlete data and internal programme information remain appropriately private.</p></div>
+          <div><p className="section-index">06 / Delivery and next steps</p><h2>Delivered, with clear room to develop.</h2></div>
+          <div><p>We demonstrated the platform to UC Davis Football staff and at the ASA case competition. Coaching and strength staff used the delivered dashboard. Working through uploads, inconsistent records, and photo feedback taught me how much a useful product depends on the details around its charts.</p><p>The project page identifies direct equipment ingestion, additional testing sources, richer multi-season summaries, and better mobile views as future improvements. These remain opportunities rather than completed features.</p><p>Project manager: Sachin Venkat. Project members: Munneth Gill, Devin Sidhu, Jessica Ting, Yuvi Riyar, and Advik Gupta.</p><p><a href="https://aggiesportsanalytics.com/projects/protech" target="_blank" rel="noreferrer">Read the ASA project overview ↗</a> for the team&apos;s feature and architecture documentation.</p></div>
         </div>
       </section>
       <CaseStudyFooter repository="https://github.com/AggieSportsAnalytics/ProTech" />
