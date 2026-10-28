@@ -30,7 +30,7 @@ const projects = [
     visual: <PrismVisual />,
   },
   {
-    eyebrow: "Operations analytics · Soaring Roadlines Inc.",
+    eyebrow: "Operations analytics · Soaring Eagle Roadlines",
     title: "Dispatch Command Centre",
     description: "A practical dispatch tool for tracking active loads across a 20-truck fleet, estimating empty dates, prioritising backloads, and making twice-daily planning easier.",
     stack: ["Python", "Streamlit", "SQLite", "Pandas"],

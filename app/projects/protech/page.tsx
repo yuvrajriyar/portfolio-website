@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 };
 
 const contributions = [
-  ["Project leadership", "Coordinated a six-person cross-functional team, priorities, stakeholder requirements, and development workflows."],
-  ["Data systems", "Contributed Supabase uploads, storage workflows, Python and bulk-upload workflows, PostgreSQL/Supabase integration, record validation and checks across multi-year athlete data."],
-  ["Visual analytics", "Built React charts, spider profiles, force-production views, and year-over-year athlete comparisons."],
-  ["Product delivery", "Helped translate technical outputs into player- and position-level insights for coaches and strength staff."],
+  ["Project coordination", "Coordinated assigned tasks and feedback within a six-person cross-functional team working with UC Davis Football stakeholders."],
+  ["Data systems", "Contributed Supabase uploads and storage workflows, record validation, missing-data checks, and consistency fixes across multi-year athlete data."],
+  ["Visual analytics", "Refined React interfaces and chart presentation, including spider and force-production views, and improved the handling of profiles with incomplete data."],
+  ["Product delivery", "Prepared athlete images, incorporated coaching feedback, and presented the finished platform at the ASA case competition."],
 ];
 
 export default function ProTechPage() {
@@ -24,7 +24,7 @@ export default function ProTechPage() {
         title="ProTech"
         deck="A centralised performance platform designed to help football staff explore multi-year athlete development without relying on fragmented spreadsheets."
         facts={[
-          { label: "Role", value: "Project lead · Data and front end" },
+          { label: "Role", value: "Data analyst · Coordination and front end" },
           { label: "Team", value: "Six contributors" },
           { label: "Users", value: "Coaches and strength staff" },
           { label: "Stack", value: "React · Supabase · Chart.js" },
@@ -43,7 +43,7 @@ export default function ProTechPage() {
       </section>
 
       <section className="section-shell estate-section">
-        <div className="estate-section-heading"><p className="section-index">02 / My contribution</p><h2>Leadership, data quality, and product work in one role.</h2></div>
+        <div className="estate-section-heading"><p className="section-index">02 / My contribution</p><h2>Coordination, data quality, and product work in one role.</h2></div>
         <div className="project-contribution-grid">{contributions.map(([title, detail], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{detail}</p></article>)}</div>
       </section>
 
@@ -73,7 +73,7 @@ export default function ProTechPage() {
       <section className="estate-limitations">
         <div className="section-shell estate-limitations-grid">
           <div><p className="section-index">05 / Outcome</p><h2>Delivered to the people it was built for.</h2></div>
-          <div><p>The finished platform was presented to UC Davis Football stakeholders and used by coaching and strength staff. The project strengthened my ability to lead across technical disciplines, protect data quality, and present analytical work in language decision-makers can act on.</p><p>The repository shows the product structure, while athlete data and internal programme information remain appropriately private.</p></div>
+          <div><p>The finished platform was presented to UC Davis Football stakeholders and used by coaching and strength staff. The project strengthened my ability to coordinate work across technical disciplines, protect data quality, and present analytical work in language decision-makers can act on.</p><p>The repository shows the product structure, while athlete data and internal programme information remain appropriately private.</p></div>
         </div>
       </section>
       <CaseStudyFooter repository="https://github.com/AggieSportsAnalytics/ProTech" />

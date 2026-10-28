@@ -12,8 +12,8 @@ export default function DispatchPage() {
     <main className="subpage estate-case-study project-case-study dispatch-case-study">
       <CaseStudyHeader />
       <CaseStudyHero
-        status="Active private operational system"
-        eyebrow="Operations analytics · Soaring Roadlines Inc."
+        status="Private operational system · Internship project"
+        eyebrow="Operations analytics · Soaring Eagle Roadlines"
         title="Dispatch Command Centre"
         deck="A practical fleet-visibility tool that converts twice-daily dispatch updates into clearer priorities for active loads, empty dates, and backhaul searches."
         facts={[
@@ -29,7 +29,7 @@ export default function DispatchPage() {
       <section id="project-story" className="estate-overview">
         <div className="section-shell estate-overview-grid">
           <div><p className="section-index">01 / Problem</p><h2>Dispatch information was available, but not easy to act on.</h2></div>
-          <div className="estate-narrative"><p>Tracking active freight across a roughly 20-truck fleet required repeated manual checks across drivers, routes, delivery dates, empty dates, and broker follow-ups. That made it easier to miss when a truck needed its next load or which backhaul search deserved attention first.</p><p>I identified the tracking bottleneck and translated dispatcher requirements into ETA visibility, empty-date tracking and backhaul-priority flags. Using Python, Streamlit, SQLite and pandas, the Dispatch Command Centre centralises those updates into one working view so the morning and afternoon reviews focus on exceptions and priorities rather than reconstructing the fleet&apos;s status.</p></div>
+          <div className="estate-narrative"><p>Tracking active freight across a roughly 20-truck fleet required repeated manual checks across drivers, routes, delivery dates, empty dates, and broker follow-ups. That made it easier to miss when a truck needed its next load or which backhaul search deserved attention first.</p><p>I translated operational needs into ETA visibility, empty-date tracking and backhaul-priority flags. Using an AI-assisted development workflow with Python, Streamlit, SQLite and pandas, I built the Dispatch Command Centre to bring those updates into one working view. I verified the outputs against manually calculated dates and priorities before using it in the morning and afternoon review process.</p></div>
           <aside className="estate-principle"><span>Operational principle</span><p>The best internal tool removes friction from a decision the team already makes every day.</p></aside>
         </div>
       </section>
@@ -58,15 +58,15 @@ export default function DispatchPage() {
       <section className="section-shell estate-section">
         <div className="estate-section-heading"><p className="section-index">04 / Impact</p><h2>A smaller workflow with a measurable operational benefit.</h2></div>
         <div className="dispatch-impact-grid">
-          <article><strong>≈50%</strong><h3>Less tracking time</h3><p>The central view roughly halved the time required for routine fleet-status reviews.</p></article>
-          <article><strong>20</strong><h3>Trucks visible</h3><p>Active loads, delivery timing, and backhaul priorities are reviewed in one place.</p></article>
+          <article><strong>≈50%</strong><h3>Less tracking time</h3><p>In my own use, the central view reduced routine fleet-status tracking time by an estimated 50%.</p></article>
+          <article><strong>20</strong><h3>Trucks represented</h3><p>The tool brought active loads, delivery timing, and backhaul priorities into one place.</p></article>
           <article><strong>2×</strong><h3>Daily operating rhythm</h3><p>Morning and afternoon updates keep records current and follow-ups visible.</p></article>
         </div>
       </section>
 
       <section className="section-shell estate-section">
         <div className="estate-section-heading"><p className="section-index">05 / Financial context</p><h2>Operational priorities need a financial view.</h2></div>
-        <div className="estate-narrative"><p>Alongside dispatch planning, I analyse revenue, gross profit, fuel and transportation expenses in Excel to support load, truck and route profitability reviews. Reconciliation and discrepancy investigation keep those reports grounded in current freight records.</p><p>The work includes broker follow-ups and communicating findings across the operation. Building the tool was one part of the job; keeping its inputs useful and connecting them to daily decisions is the ongoing responsibility.</p></div>
+        <div className="estate-narrative"><p>Alongside dispatch planning, I analysed revenue, gross profit, fuel and transportation expenses in Excel to support load, truck and route profitability reviews. Reconciliation and discrepancy investigation kept those reports grounded in current freight records.</p><p>The work included broker follow-ups and communicating findings across the operation. Building the tool was one part of the internship; validating its inputs and connecting them to daily decisions made it useful.</p></div>
       </section>
 
       <section className="estate-limitations">

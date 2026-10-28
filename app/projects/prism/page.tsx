@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CaseStudyHeader, CaseStudyHero, ExternalArrow } from "../case-study-components";
 
-const site = "https://prism.yuvi200430.chatgpt.site";
+const site = "https://prism-75v.pages.dev";
 export const metadata: Metadata = {
   title: "PRISM | Yuvraj Riyar",
   description: "Building PRISM: a founder-led technology service for local businesses, with a public React website and an interactive discovery tool. Current progress and the first pilot ahead.",
